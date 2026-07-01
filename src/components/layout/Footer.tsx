@@ -5,16 +5,14 @@ import { Scale } from "lucide-react";
 
 export function Footer() {
   const links = [
-    { label: "Platform", href: "#" },
-    { label: "How it works", href: "#" },
-    { label: "HIPAA", href: "#" },
-    { label: "Privacy", href: "#" },
-    { label: "Terms", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Platform", href: "#platform", isSection: true },
+    { label: "How it works", href: "#ai-pipeline", isSection: true },
+    { label: "Privacy", href: "#", isSection: false },
+    { label: "Terms", href: "#", isSection: false },
   ];
 
   return (
-    <footer className="bg-background-warm border-t border-[#08302a]/10">
+    <footer className="w-full bg-background-warm border-t border-[#08302a]/10">
       <div className="w-full max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
 
         {/* Left: Logo */}
@@ -33,6 +31,21 @@ export function Footer() {
             <Link
               key={index}
               href={link.href}
+              onClick={(e) => {
+                if (link.isSection) {
+                  e.preventDefault();
+                  const element = document.getElementById(link.href.replace('#', ''));
+                  if (element) {
+                    const navHeight = 100;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - navHeight;
+                    window.scrollTo({
+                      top: offsetPosition,
+                      behavior: "smooth"
+                    });
+                  }
+                }
+              }}
               className="text-[13px] font-medium text-[#08302a]/60 hover:text-[#08302a] transition-colors"
             >
               {link.label}

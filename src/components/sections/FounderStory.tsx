@@ -18,9 +18,10 @@ export function FounderStory() {
           <div className="grid lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-center">
 
             {/* Left Column - Dark Card */}
-            <div className="bg-[#08302a] rounded-[24px] p-12 md:p-16 flex flex-col items-center justify-center text-center relative overflow-hidden shadow-xl aspect-square lg:aspect-auto lg:h-[480px]">
+            <div className="bg-[#08302a] bg-gradient-to-br from-[#12604f] via-[#08302a] to-[#020d0b] border border-[#00c37a]/20 rounded-[24px] p-12 md:p-16 flex flex-col items-center justify-center text-center relative overflow-hidden shadow-xl aspect-square lg:aspect-auto lg:h-[480px]">
               {/* Subtle background glow */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#00c37a]/10 to-transparent opacity-50" />
+              <div className="absolute top-0 left-0 w-[150%] h-[60%] bg-gradient-to-b from-[#00c37a]/30 to-transparent opacity-80 pointer-events-none -translate-x-1/4 -translate-y-1/2 blur-[100px]" />
+              <div className="absolute -bottom-[20%] -right-[10%] w-[80%] h-[80%] bg-[#00c37a]/20 blur-[120px] rounded-full pointer-events-none" />
 
               <div className="relative z-10 flex flex-col items-center gap-8">
                 <div className="text-[#00c37a]">

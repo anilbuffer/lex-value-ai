@@ -74,13 +74,13 @@ export function Hero() {
 
           {/* Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 mb-12 w-full sm:w-auto">
-            <Button size="lg" className="w-full sm:w-auto px-8 h-14 bg-[#08302a] hover:bg-[#051c18] rounded-full text-[15px]bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)]">
+            <Button size="lg" className="w-full sm:w-auto px-8 h-14 bg-[#08302a] hover:bg-[#051c18] text-white rounded-full text-[15px] shadow-[0_8px_24px_rgba(8,48,42,0.2)] transition-shadow duration-300">
               Book a Live Demo
               <span className="ml-2 font-serif text-lg">→</span>
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 h-14 bg-white hover:bg-white/80 bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)] shadow-sm rounded-full text-[#08302a] font-semibold text-[15px]">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 h-14 bg-white hover:bg-gray-50 border border-[#00c37a] shadow-[0_8px_24px_rgba(8,48,42,0.1)] rounded-full text-[#00c37a] font-semibold text-[15px] transition-shadow duration-300">
               See how it works
-              <span className="ml-2 text-[#08302a]/60">›</span>
+              <span className="ml-2 text-[#00c37a]/60">›</span>
             </Button>
           </motion.div>
 
@@ -112,7 +112,7 @@ export function Hero() {
             {/* Mockup Header */}
             <div className="flex items-center justify-between border-b border-[#08302a]/5 pb-6 mb-6">
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#08302a] flex items-center justify-center text-white shadow-sm">
+                <div className="w-10 h-10 rounded-full bg-[#08302a] flex items-center justify-center text-white shadow-[0_4px_20px_rgba(0,195,122,0.3)] border border-[#00c37a]/40">
                   <FileText size={18} />
                 </div>
                 <div>
@@ -216,7 +216,7 @@ export function Hero() {
               animate={{ y: [0, -6, 0], opacity: 1 }}
               transition={{ y: { duration: 6, repeat: Infinity, ease: "easeInOut" }, opacity: { delay: 0.8, duration: 0.5 } }}
             >
-              <div className="w-10 h-10 rounded-full bg-[#00c37a]/15 flex items-center justify-center text-[#00c37a]">
+              <div className="w-10 h-10 rounded-full bg-[#00c37a]/15 flex items-center justify-center text-[#00c37a] shadow-[0_4px_20px_rgba(0,195,122,0.3)] border border-[#00c37a]/40">
                 <Zap size={18} />
               </div>
               <div>

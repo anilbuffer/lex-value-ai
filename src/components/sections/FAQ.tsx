@@ -67,13 +67,13 @@ export function FAQ() {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none"
+                  className="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none group"
                 >
                   <span className="font-medium text-[15px] text-[#08302a] pr-8">
                     {faq.question}
                   </span>
 
-                  <div className="shrink-0 w-8 h-8 rounded-full bg-[#00c37a]/15 flex items-center justify-center text-[#08302a] transition-colors hover:bg-[#00c37a]/25">
+                  <div className="shrink-0 w-8 h-8 rounded-full bg-[#00c37a]/15 flex items-center justify-center text-[#08302a] transition-colors group-hover:bg-[#00c37a]/25 shadow-[0_4px_16px_rgba(0,195,122,0.3)] border border-[#00c37a]/40">
                     {isOpen ? <Minus size={16} strokeWidth={2.5} /> : <Plus size={16} strokeWidth={2.5} />}
                   </div>
                 </button>

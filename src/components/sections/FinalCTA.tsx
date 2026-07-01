@@ -15,10 +15,11 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-[#08302a] rounded-[32px] md:rounded-[48px] p-12 md:p-20 lg:p-24 flex flex-col items-center text-center relative overflow-hidden shadow-2xl"
+          className="bg-[#08302a] bg-gradient-to-br from-[#12604f] via-[#08302a] to-[#020d0b] border border-[#00c37a]/20 rounded-[32px] md:rounded-[48px] p-12 md:p-20 lg:p-24 flex flex-col items-center text-center relative overflow-hidden shadow-2xl"
         >
           {/* Subtle Glow Background */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00c37a]/10 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00c37a]/20 rounded-full blur-[140px] pointer-events-none" />
+          <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[100%] bg-[#00c37a]/25 blur-[140px] rounded-full pointer-events-none" />
 
           <div className="relative z-10 flex flex-col items-center">
             {/* Pill */}

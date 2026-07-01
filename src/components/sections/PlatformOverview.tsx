@@ -92,7 +92,7 @@ export function PlatformOverview() {
               variants={itemVariants}
               className="bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.04),0_16px_24px_rgba(8,48,42,0.02)] rounded-[32px] p-8 md:p-10 flex flex-col items-start hover:-translate-y-1 transition-transform duration-300"
             >
-              <div className="w-12 h-12 rounded-full bg-[#08302a] flex items-center justify-center mb-6 text-white shadow-sm">
+              <div className="w-12 h-12 rounded-full bg-[#08302a] flex items-center justify-center mb-6 text-white shadow-[0_4px_20px_rgba(0,195,122,0.3)] border border-[#00c37a]/40">
                 <feature.icon size={20} strokeWidth={1.5} />
               </div>
               

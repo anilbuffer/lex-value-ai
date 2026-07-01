@@ -74,19 +74,19 @@ export function Comparison() {
           className="bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.04),0_16px_24px_rgba(8,48,42,0.02)] rounded-[32px] overflow-hidden"
         >
           {/* Table Header */}
-          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-4 p-8 pb-4 border-b border-[#08302a]/5">
-            <div className="text-[11px] font-bold text-[#08302a]/50 uppercase tracking-widest">Workflow</div>
-            <div className="hidden md:block text-[11px] font-bold text-[#08302a]/50 uppercase tracking-widest">Manual Review</div>
-            <div className="hidden md:block text-[11px] font-bold text-[#08302a]/70 uppercase tracking-widest">Lex Value AI</div>
+          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-4 px-8 py-5 bg-[#08302a]">
+            <div className="text-[11px] font-bold text-white/70 uppercase tracking-widest">Workflow</div>
+            <div className="hidden md:block text-[11px] font-bold text-white/70 uppercase tracking-widest">Manual Review</div>
+            <div className="hidden md:block text-[11px] font-bold text-white uppercase tracking-widest">Lex Value AI</div>
           </div>
 
           {/* Table Rows */}
-          <div className="flex flex-col">
+          <div className="flex flex-col bg-[#FAFAFA]">
             {comparisonData.map((row, index) => (
               <motion.div
                 key={index}
                 variants={rowVariants}
-                className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-4 p-8 border-b border-[#08302a]/5 last:border-b-0 items-center hover:bg-[#08302a]/[0.02] transition-colors"
+                className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-4 px-8 py-5 border-b border-[#08302a]/5 last:border-b-0 items-center hover:bg-white transition-colors"
               >
                 {/* Column 1 */}
                 <div className="text-[15px] font-semibold text-[#08302a]">

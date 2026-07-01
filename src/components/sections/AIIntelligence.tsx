@@ -93,7 +93,7 @@ export function AIIntelligence() {
               className="bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.04),0_16px_24px_rgba(8,48,42,0.02)] rounded-[32px] p-8 flex items-start gap-6 hover:-translate-y-1 transition-transform duration-300"
             >
               {/* Icon */}
-              <div className="shrink-0 w-12 h-12 rounded-full bg-[#00c37a]/15 flex items-center justify-center text-[#08302a]">
+              <div className="shrink-0 w-12 h-12 rounded-full bg-[#00c37a]/15 flex items-center justify-center text-[#08302a] shadow-[0_4px_20px_rgba(0,195,122,0.3)] border border-[#00c37a]/40">
                 <flag.icon size={20} strokeWidth={1.5} />
               </div>
               

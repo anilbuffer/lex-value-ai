@@ -90,7 +90,7 @@ export function AIWorkflow() {
             >
               {/* Top Row: Icon & Number */}
               <div className="flex items-center justify-between mb-8">
-                <div className="w-12 h-12 rounded-full bg-[#08302a] flex items-center justify-center text-white shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-[#08302a] flex items-center justify-center text-white shadow-[0_4px_20px_rgba(0,195,122,0.3)] border border-[#00c37a]/40">
                   <stage.icon size={20} strokeWidth={1.5} />
                 </div>
                 <div className="font-display text-[28px] font-medium text-[#00c37a]">

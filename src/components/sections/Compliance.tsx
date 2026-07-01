@@ -71,7 +71,7 @@ export function Compliance() {
               variants={itemVariants}
               className="bg-[#fafafa] rounded-[24px] p-6 flex items-center gap-4 border border-[#08302a]/10 shadow-[0_8px_30px_rgba(8,48,42,0.04)]"
             >
-              <div className="w-12 h-12 rounded-full bg-[#00c37a]/15 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 rounded-full bg-[#00c37a]/15 flex items-center justify-center shrink-0 shadow-[0_4px_20px_rgba(0,195,122,0.3)] border border-[#00c37a]/40">
                 <feature.icon size={20} className="text-[#08302a]" />
               </div>
               <div className="flex flex-col">

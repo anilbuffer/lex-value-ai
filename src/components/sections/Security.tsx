@@ -53,7 +53,11 @@ export function Security() {
     <SectionContainer className="bg-background-warm" id="security">
       <div className="w-full max-w-7xl mx-auto px-6">
 
-        <div className="bg-[#08302a] rounded-[32px] p-8 md:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
+        <div className="bg-[#08302a] bg-gradient-to-br from-[#12604f] via-[#08302a] to-[#020d0b] border border-[#00c37a]/20 rounded-[32px] p-8 md:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
+          {/* Subtle glowing effects */}
+          <div className="absolute -top-[20%] -left-[10%] w-[60%] h-[100%] bg-[#00c37a]/25 blur-[140px] rounded-full pointer-events-none" />
+          <div className="absolute -bottom-[20%] -right-[10%] w-[60%] h-[100%] bg-[#00c37a]/20 blur-[140px] rounded-full pointer-events-none" />
+          
           {/* Subtle dot pattern background */}
           <div
             className="absolute inset-0 opacity-[0.15]"
@@ -112,7 +116,7 @@ export function Security() {
                   variants={itemVariants}
                   className="bg-white/5 border border-white/10 rounded-[24px] p-5 flex items-center gap-4 hover:bg-white/10 transition-colors duration-300 backdrop-blur-sm"
                 >
-                  <div className="shrink-0 w-11 h-11 rounded-full bg-[#00c37a]/15 flex items-center justify-center text-[#00c37a]">
+                  <div className="shrink-0 w-11 h-11 rounded-full bg-[#00c37a]/15 flex items-center justify-center text-[#00c37a] shadow-[0_4px_20px_rgba(0,195,122,0.3)] border border-[#00c37a]/40">
                     <feature.icon size={18} strokeWidth={2} />
                   </div>
 
