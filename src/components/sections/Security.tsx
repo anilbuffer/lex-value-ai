@@ -77,8 +77,8 @@ export function Security() {
               </div>
 
               {/* Heading */}
-              <h2 className="font-playfair text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-white to-[#00c37a]/60 leading-[1.055] mb-8">
-                HIPAA-grade from <br className="hidden md:block" />
+              <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-white leading-[1.055] mb-8">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#00e08c]">HIPAA-grade</span> from <br className="hidden md:block" />
                 day one — not bolted <br className="hidden md:block" />
                 on after Series A.
               </h2>

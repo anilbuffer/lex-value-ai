@@ -68,9 +68,9 @@ export function AIWorkflow() {
             <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">AI Pipeline</span>
           </div>
           
-          <h2 className="font-playfair text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#08302a] via-[#08302a] to-[#00c37a] leading-[1.055]">
-            Six stages. Zero raw<br className="hidden md:block" />
-            PHI leaves your walls.
+          <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-[#08302a] leading-[1.055]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">Six stages.</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">Zero raw PHI</span><br className="hidden md:block" />
+            leaves your walls.
           </h2>
         </div>
 
@@ -93,13 +93,13 @@ export function AIWorkflow() {
                 <div className="w-12 h-12 rounded-full bg-[#08302a] flex items-center justify-center text-white shadow-sm">
                   <stage.icon size={20} strokeWidth={1.5} />
                 </div>
-                <div className="font-playfair text-[28px] font-medium text-[#00c37a]">
+                <div className="font-display text-[28px] font-medium text-[#00c37a]">
                   {stage.num}
                 </div>
               </div>
               
               {/* Bottom Row: Content */}
-              <h3 className="font-playfair text-[20px] font-semibold text-[#08302a] mb-3">
+              <h3 className="font-display text-[20px] font-semibold text-[#08302a] mb-3">
                 {stage.title}
               </h3>
               

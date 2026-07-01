@@ -35,7 +35,7 @@ export function Metrics() {
         >
           {metrics.map((metric, index) => (
             <div key={index} className="p-8 lg:p-10 flex flex-col justify-center">
-              <div className="text-5xl lg:text-[4rem] font-playfair font-medium text-primary mb-4 tracking-tight">
+              <div className="text-5xl lg:text-[4rem] font-display font-medium text-primary mb-4 tracking-tight">
                 {metric.value}
               </div>
               <p className="text-body-text text-sm font-medium leading-relaxed opacity-80">

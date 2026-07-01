@@ -57,7 +57,7 @@ export function Hero() {
           </motion.div>
 
           {/* Headline */}
-          <motion.h1 variants={itemVariants} className="font-playfair text-[36px] md:text-[48px] lg:text-[60px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
+          <motion.h1 variants={itemVariants} className="font-display text-[36px] md:text-[48px] lg:text-[60px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
             Medical record review <br className="hidden md:block" />
             <span className="font-medium relative inline-block">
               <span className="bg-gradient-to-r from-[#08302a] to-[#00c37a] bg-clip-text text-transparent">reimagined</span>

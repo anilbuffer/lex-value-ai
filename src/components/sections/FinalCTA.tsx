@@ -28,9 +28,9 @@ export function FinalCTA() {
             </div>
             
             {/* Heading */}
-            <h2 className="font-playfair text-[40px] md:text-[56px] lg:text-[72px] tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-white to-[#00c37a]/60 leading-[1.055] mb-8">
-              Stop reading records.<br className="hidden md:block" />
-              Start winning them.
+            <h2 className="font-display text-[40px] md:text-[56px] lg:text-[72px] tracking-tight text-white leading-[1.055] mb-8">
+              Stop <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#00e08c]">reading records.</span><br className="hidden md:block" />
+              Start <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#00e08c]">winning them.</span>
             </h2>
             
             {/* Paragraph */}

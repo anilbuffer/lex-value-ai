@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, Inter, Playfair_Display } from "next/font/google";
+import { Sora, Playfair_Display, Roboto } from "next/font/google";
 import "./globals.css";
 
 const sora = Sora({
@@ -7,9 +7,10 @@ const sora = Sora({
   subsets: ["latin"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 const playfair = Playfair_Display({
@@ -28,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sora.variable} ${inter.variable} ${playfair.variable} antialiased scroll-smooth`}>
+    <html lang="en" className={`${sora.variable} ${roboto.variable} ${playfair.variable} antialiased scroll-smooth`}>
       <body className="min-h-screen flex flex-col font-sans text-foreground bg-background-warm selection:bg-accent/20">
         {children}
       </body>

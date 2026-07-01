@@ -26,7 +26,7 @@ export function FounderStory() {
                 <div className="text-[#00c37a]">
                   <Scale size={56} strokeWidth={1.5} />
                 </div>
-                <h3 className="font-playfair text-[28px] md:text-[32px] leading-tight text-[#ffffff] font-medium max-w-[280px]">
+                <h3 className="font-display text-[28px] md:text-[32px] leading-tight text-[#ffffff] font-medium max-w-[280px]">
                   Built for plaintiffs.<br />
                   Defense perspective.
                 </h3>
@@ -42,8 +42,8 @@ export function FounderStory() {
               </div>
 
               {/* Heading */}
-              <h2 className="font-playfair text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#08302a] via-[#08302a] to-[#00c37a] leading-[1.055] mb-8">
-                I spent a decade helping insurance carriers pay you less.
+              <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
+                I spent a decade helping <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">insurance carriers</span> pay you <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">less</span>.
               </h2>
 
               {/* Paragraphs */}

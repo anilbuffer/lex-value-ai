@@ -9,6 +9,7 @@ import { AIIntelligence } from "@/components/sections/AIIntelligence";
 import { AIWorkflow } from "@/components/sections/AIWorkflow";
 import { Security } from "@/components/sections/Security";
 import { Comparison } from "@/components/sections/Comparison";
+import { Pricing } from "@/components/sections/Pricing";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -37,6 +38,7 @@ export default function Home() {
       <AIWorkflow />
       <Security />
       <Comparison />
+      <Pricing />
       <Testimonials />
       <FAQ />
       <FinalCTA />

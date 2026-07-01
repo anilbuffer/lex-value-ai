@@ -59,9 +59,9 @@ export function Comparison() {
             <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">Comparison</span>
           </div>
 
-          <h2 className="font-playfair text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#08302a] via-[#08302a] to-[#00c37a] leading-[1.055]">
+          <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-[#08302a] leading-[1.055]">
             The manual workflow<br className="hidden md:block" />
-            vs. Lex Value AI.
+            vs. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">CaseChron AI.</span>
           </h2>
         </div>
 

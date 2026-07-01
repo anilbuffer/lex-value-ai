@@ -43,8 +43,8 @@ export function FAQ() {
             <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">FAQ</span>
           </div>
 
-          <h2 className="font-playfair text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#08302a] via-[#08302a] to-[#00c37a] leading-[1.055]">
-            What partners ask before they buy.
+          <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-[#08302a] leading-[1.055]">
+            What partners ask <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">before they buy.</span>
           </h2>
         </div>
 

@@ -41,11 +41,11 @@ export function Problem() {
               <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">The Problem</span>
             </div>
             
-            <h2 className="font-playfair text-[36px] md:text-[48px] lg:text-[60px] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#08302a] via-[#08302a] to-[#00c37a] leading-[1.055] mb-8">
+            <h2 className="font-display text-[36px] md:text-[48px] lg:text-[60px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
               Your paralegals are <br className="hidden md:block" />
-              reading 3,000 pages. <br className="hidden md:block" />
-              Defense already knows <br className="hidden md:block" />
-              what they'll miss.
+              reading <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">3,000 pages</span>. <br className="hidden md:block" />
+              Defense <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">already knows</span> <br className="hidden md:block" />
+              what's on page 412.
             </h2>
             
             <p className="text-lg md:text-[16px] text-[#08302a]/80 mb-10 font-medium leading-[1.6] max-w-[540px]">
@@ -72,11 +72,11 @@ export function Problem() {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 className="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex gap-6 items-start"
               >
-                <div className="text-3xl font-medium text-accent font-playfair">
+                <div className="text-3xl font-medium text-accent font-display">
                   {item.num}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-primary mb-2 font-playfair">
+                  <h3 className="text-xl font-bold text-primary mb-2 font-display">
                     {item.title}
                   </h3>
                   <p className="text-body-text leading-relaxed">

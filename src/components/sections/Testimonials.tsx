@@ -44,8 +44,8 @@ export function Testimonials() {
             <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">Testimonials</span>
           </div>
           
-          <h2 className="font-playfair text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#08302a] via-[#08302a] to-[#00c37a] leading-[1.055]">
-            Partners who bet the file on it.
+          <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-[#08302a] leading-[1.055]">
+            Partners who <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">bet the file</span> on it.
           </h2>
         </div>
 

@@ -68,9 +68,9 @@ export function PlatformOverview() {
             <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">Platform</span>
           </div>
           
-          <h2 className="font-playfair text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#08302a] via-[#08302a] to-[#00c37a] leading-[1.055] mb-8">
-            One workspace. Every record.<br className="hidden md:block" />
-            The whole case, understood.
+          <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">One workspace.</span> Every record.<br className="hidden md:block" />
+            The whole case, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">understood.</span>
           </h2>
           
           <p className="text-lg md:text-[16px] text-[#08302a]/80 font-medium leading-[1.6]">
@@ -96,7 +96,7 @@ export function PlatformOverview() {
                 <feature.icon size={20} strokeWidth={1.5} />
               </div>
               
-              <h3 className="font-playfair text-[20px] font-semibold text-[#08302a] mb-3">
+              <h3 className="font-display text-[20px] font-semibold text-[#08302a] mb-3">
                 {feature.title}
               </h3>
               

@@ -68,9 +68,9 @@ export function AIIntelligence() {
             <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">Case Intelligence</span>
           </div>
           
-          <h2 className="font-playfair text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#08302a] via-[#08302a] to-[#00c37a] leading-[1.055] mb-6">
-            The six flags defense counsel<br className="hidden md:block" />
-            is already looking for.
+          <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-[#08302a] leading-[1.055] mb-6">
+            The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">six flags</span> defense counsel<br className="hidden md:block" />
+            is <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">already looking for.</span>
           </h2>
           
           <p className="text-lg md:text-[16px] text-[#08302a]/80 font-medium leading-[1.6]">
@@ -99,7 +99,7 @@ export function AIIntelligence() {
               
               {/* Content */}
               <div className="flex flex-col w-full">
-                <h3 className="font-playfair text-[20px] font-semibold text-[#08302a] mb-2">
+                <h3 className="font-display text-[20px] font-semibold text-[#08302a] mb-2">
                   {flag.title}
                 </h3>
                 
