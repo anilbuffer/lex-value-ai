@@ -27,7 +27,7 @@ export function Hero() {
   };
 
   return (
-    <SectionContainer className="min-h-screen flex items-center justify-center pt-32 pb-20 bg-[#F4EFE7] relative overflow-hidden">
+    <SectionContainer withGlow={false} className="min-h-screen flex items-center justify-center pt-32 pb-20 bg-[#F4EFE7] relative overflow-hidden">
       {/* Background Textures & Glows */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div

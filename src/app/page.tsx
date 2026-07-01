@@ -14,48 +14,41 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/layout/Footer";
-
-
-
-
-
-
-
-
-
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { SectionDivider } from "@/components/ui/SectionDivider";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative overflow-hidden bg-background-warm selection:bg-accent/20">
       <Navigation />
       <Hero />
-      <Compliance />
-      <Problem />
-      <Metrics />
-      <FounderStory />
-      <PlatformOverview />
-      <AIIntelligence />
-      <AIWorkflow />
-      <Security />
-      <Comparison />
-      <Pricing />
-      <Testimonials />
-      <FAQ />
-      <FinalCTA />
+      {/* <SectionDivider /> */}
+      <ScrollReveal className="w-full"><Compliance /></ScrollReveal>
+      {/* <SectionDivider /> */}
+      <ScrollReveal className="w-full"><Problem /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><Metrics /></ScrollReveal>
+      {/* <SectionDivider /> */}
+      <ScrollReveal className="w-full"><FounderStory /></ScrollReveal>
+      {/* <SectionDivider /> */}
+      <ScrollReveal className="w-full"><PlatformOverview /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><AIIntelligence /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><AIWorkflow /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><Security /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><Comparison /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><Pricing /></ScrollReveal>
+      {/* <SectionDivider /> */}
+      <ScrollReveal className="w-full"><Testimonials /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><FAQ /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><FinalCTA /></ScrollReveal>
       <Footer />
-      {/* 
-      <TrustedPlatform />
-      <WhyLex Value />
-      <AIIntelligence />
-      <AIWorkflow />
-      <DashboardShowcase />
-      <Security />
-      <Comparison />
-      <Testimonials />
-      <FAQ />
-      <FinalCTA />
-      <Footer /> 
-      */}
     </main>
   );
 }
