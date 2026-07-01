@@ -30,12 +30,16 @@ export function Hero() {
     <SectionContainer className="min-h-screen flex items-center justify-center pt-32 pb-20 bg-[#F4EFE7] relative overflow-hidden">
       {/* Background Textures & Glows */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div 
-          className="absolute inset-0 opacity-[0.04]" 
+        <div
+          className="absolute inset-0 opacity-[0.04]"
           style={{ backgroundImage: 'radial-gradient(#08302a 1px, transparent 1px)', backgroundSize: '32px 32px' }}
         />
-        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#00c37a]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#08302a]/5 rounded-full blur-[120px]" />
+        {/* Left Side Rainbow/Colorful Glow */}
+        <div className="absolute top-[10%] left-[-15%] w-[800px] h-[800px] bg-gradient-to-tr from-purple-400/20 via-pink-300/20 to-blue-400/20 rounded-full blur-[120px] mix-blend-multiply" />
+        <div className="absolute top-[40%] left-[5%] w-[600px] h-[600px] bg-gradient-to-br from-blue-300/20 via-teal-300/20 to-transparent rounded-full blur-[120px] mix-blend-multiply" />
+
+        {/* Right Side Glow */}
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#00c37a]/15 rounded-full blur-[120px]" />
       </div>
 
       <motion.div
@@ -55,8 +59,8 @@ export function Hero() {
           {/* Headline */}
           <motion.h1 variants={itemVariants} className="font-playfair text-[36px] md:text-[48px] lg:text-[60px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
             Medical record review <br className="hidden md:block" />
-            <span className="italic font-medium relative inline-block">
-              <span className="bg-gradient-to-r from-[#08302a] to-[#00c37a] px-1 bg-clip-text text-transparent">reimagined</span>
+            <span className="font-medium relative inline-block">
+              <span className="bg-gradient-to-r from-[#08302a] to-[#00c37a] bg-clip-text text-transparent">reimagined</span>
               <span className="absolute inset-0 bg-[#00c37a]/15 blur-2xl rounded-full -z-10 transform scale-120" />
             </span> for
             <span className="bg-gradient-to-r from-[#00c37a] to-[#08302a] px-1 bg-clip-text text-transparent"> plaintiff</span> firms.
@@ -65,7 +69,7 @@ export function Hero() {
 
           {/* Subtext */}
           <motion.p variants={itemVariants} className="text-lg md:text-[16px] text-[#08302a]/80 mb-10 font-medium leading-[1.6] max-w-[540px]">
-            CaseChron AI turns unruly medical records into structured chronologies, litigation-critical case flags, and narrative summaries — encoded with the same analytical lens insurance defense uses to devalue your cases.
+            LexValue AI turns unruly medical records into structured chronologies, litigation-critical case flags, and narrative summaries — encoded with the same analytical lens insurance defense uses to devalue your cases.
           </motion.p>
 
           {/* Buttons */}

@@ -30,7 +30,7 @@ export function Navigation() {
           <div className="bg-[#08302a] text-[#00c37a] p-2 rounded-full flex items-center justify-center shadow-[0_0_12px_rgba(0,195,122,0.3)]">
             <Gavel size={18} strokeWidth={2} />
           </div>
-          <span className="font-bold text-[17px] tracking-tight text-[#08302a]">CaseChron<span className="text-[#00c37a]">.AI</span></span>
+          <span className="font-bold text-[17px] tracking-tight text-[#08302a]">LexValue<span className="text-[#00c37a]">.AI</span></span>
         </div>
 
         <nav className="hidden md:flex items-center gap-8 font-medium text-sm text-[#4a5f58]">
