@@ -17,33 +17,32 @@ export function Navigation() {
   return (
     <motion.header
       className={cn(
-        "fixed left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-6xl z-50 transition-all duration-300",
-        "py-2.5 px-4 bg-white/70 backdrop-blur-md border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-full",
-        isScrolled ? "top-2 bg-white/80 shadow-[0_8px_32px_rgba(0,0,0,0.08)]" : "top-6"
+        "fixed left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-7xl z-50 transition-all duration-300",
+        "py-2.5 px-3 bg-white/70 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(0,195,122,0.12),0_2px_8px_rgba(0,0,0,0.04)] rounded-full",
+        isScrolled ? "top-2 bg-white/80" : "top-6"
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="flex items-center justify-between w-full pl-2">
-        <div className="flex items-center gap-3">
-          <div className="bg-[#0f2e24] text-white p-2 rounded-full flex items-center justify-center">
+      <div className="flex items-center justify-between w-full">
+        <div className="flex items-center gap-2.5 pl-1">
+          <div className="bg-[#08302a] text-[#00c37a] p-2 rounded-full flex items-center justify-center shadow-[0_0_12px_rgba(0,195,122,0.3)]">
             <Gavel size={18} strokeWidth={2} />
           </div>
-          <span className="font-semibold text-lg tracking-tight text-[#0f2e24]">CaseChron<span className="text-emerald-500">.AI</span></span>
+          <span className="font-bold text-[17px] tracking-tight text-[#08302a]">CaseChron<span className="text-[#00c37a]">.AI</span></span>
         </div>
 
         <nav className="hidden md:flex items-center gap-8 font-medium text-sm text-[#4a5f58]">
-          <a href="#platform" className="hover:text-[#0f2e24] transition-colors">Platform</a>
-          <a href="#intelligence" className="hover:text-[#0f2e24] transition-colors">Intelligence</a>
-          <a href="#engine" className="hover:text-[#0f2e24] transition-colors">AI Engine</a>
-          <a href="#security" className="hover:text-[#0f2e24] transition-colors">Security</a>
-          <a href="#faq" className="hover:text-[#0f2e24] transition-colors">FAQ</a>
+          <a href="#platform" className="hover:text-[#08302a] transition-colors">Platform</a>
+          <a href="#intelligence" className="hover:text-[#08302a] transition-colors">Intelligence</a>
+          <a href="#how-it-works" className="hover:text-[#08302a] transition-colors">How it works</a>
+          <a href="#pricing" className="hover:text-[#08302a] transition-colors">Pricing</a>
         </nav>
 
-        <div className="flex items-center gap-6">
-          <a href="#login" className="hidden md:block font-medium text-sm text-[#4a5f58] hover:text-[#0f2e24] transition-colors">Sign in</a>
-          <Button size="sm" className="rounded-full bg-[#0f2e24] hover:bg-[#0a1f18] text-white px-5 py-2 h-auto text-sm font-medium border-none shadow-none">Request demo</Button>
+        <div className="flex items-center gap-6 pr-1">
+          <a href="#login" className="hidden md:block font-medium text-sm text-[#4a5f58] hover:text-[#08302a] transition-colors">Sign in</a>
+          <Button size="sm" className="rounded-full bg-[#08302a] hover:bg-[#051c18] text-white px-6 py-2.5 h-auto text-sm font-medium border border-[#00c37a]/30 shadow-[0_0_15px_rgba(0,195,122,0.4)] hover:shadow-[0_0_25px_rgba(0,195,122,0.6)] transition-all duration-300">Request demo</Button>
         </div>
       </div>
     </motion.header>

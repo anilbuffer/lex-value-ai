@@ -2,9 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { GradientBlob } from "@/components/animations/GradientBlob";
-import { GlassCard } from "@/components/ui/GlassCard";
-import { Shield, BrainCircuit, Stethoscope, ArrowUpRight, FileText, AlertTriangle, CheckCircle2, Sparkles, Activity } from "lucide-react";
+import { Shield, Lock, FileCheck, Users, Clock, AlertTriangle, FileText, CheckCircle2, Zap, ShieldCheck, Sparkles, Activity } from "lucide-react";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 
 export function Hero() {
@@ -29,58 +27,71 @@ export function Hero() {
   };
 
   return (
-    <SectionContainer className="min-h-screen flex items-center justify-center pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#F5F3ED] via-[#EDF3ED] to-[#F1EDE7] relative">
-      {/* Background Neon Blobs - reverted to beige/green enterprise gradient */}
-      <GradientBlob className="w-[800px] h-[800px] top-[-100px] -left-[200px]" color="primary" />
-      <GradientBlob className="w-[700px] h-[700px] top-[20%] -right-[150px]" color="emerald" delay={10} />
-      <GradientBlob className="w-[600px] h-[600px] bottom-[-100px] left-[15%]" color="teal" delay={5} />
+    <SectionContainer className="min-h-screen flex items-center justify-center pt-32 pb-20 bg-[#F4EFE7] relative overflow-hidden">
+      {/* Background Textures & Glows */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div 
+          className="absolute inset-0 opacity-[0.04]" 
+          style={{ backgroundImage: 'radial-gradient(#08302a 1px, transparent 1px)', backgroundSize: '32px 32px' }}
+        />
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#00c37a]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#08302a]/5 rounded-full blur-[120px]" />
+      </div>
 
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="w-full max-w-[1400px] mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-8 items-center relative z-10"
+        className="w-full max-w-7xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-10 items-center relative z-10"
       >
-        {/* Left Column: Copy & CTAs */}
+        {/* Left Column */}
         <div className="flex flex-col items-start text-left max-w-2xl">
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/40 border border-white/60 backdrop-blur-[18px] mb-8 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-[11px] font-bold text-primary/80 uppercase tracking-widest">HIPAA-COMPLIANT · SOC 2 TYPE II IN PROGRESS</span>
+          {/* Top Pill */}
+          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)] mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00c37a]" />
+            <span className="text-[10px] font-bold text-[#08302a]/70">HIPAA-COMPLIANT <span className="mx-1 text-[#08302a]/30">·</span> BUILT FOR PLAINTIFF PI FIRMS</span>
           </motion.div>
 
-          <motion.h1 variants={itemVariants} className="font-sora text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-primary leading-[1.05] mb-6">
-            Medical record <br />
-            review, <br />
-            <span className="italic font-light">reimagined</span> for <br />
-            plaintiff firms.
+          {/* Headline */}
+          <motion.h1 variants={itemVariants} className="font-playfair text-[36px] md:text-[48px] lg:text-[60px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
+            Medical record review <br className="hidden md:block" />
+            <span className="italic font-medium relative inline-block">
+              <span className="bg-gradient-to-r from-[#08302a] to-[#00c37a] px-1 bg-clip-text text-transparent">reimagined</span>
+              <span className="absolute inset-0 bg-[#00c37a]/15 blur-2xl rounded-full -z-10 transform scale-120" />
+            </span> for
+            <span className="bg-gradient-to-r from-[#00c37a] to-[#08302a] px-1 bg-clip-text text-transparent"> plaintiff</span> firms.
+
           </motion.h1>
 
-          <motion.p variants={itemVariants} className="text-lg text-primary/70 mb-10 font-medium leading-relaxed max-w-xl">
-            CaseChron ingests thousands of pages of medical records and returns litigation-ready chronologies, case intelligence flags, and demand-ready narratives — with citations to the exact page. In hours, not weeks.
+          {/* Subtext */}
+          <motion.p variants={itemVariants} className="text-lg md:text-[16px] text-[#08302a]/80 mb-10 font-medium leading-[1.6] max-w-[540px]">
+            CaseChron AI turns unruly medical records into structured chronologies, litigation-critical case flags, and narrative summaries — encoded with the same analytical lens insurance defense uses to devalue your cases.
           </motion.p>
 
+          {/* Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 mb-12 w-full sm:w-auto">
-            <Button size="lg" glow className="w-full sm:w-auto px-10 h-14 bg-[#08383A] hover:bg-[#062c2e]">
-              Request a demo
-              <ArrowUpRight size={18} className="ml-2 opacity-80" />
+            <Button size="lg" className="w-full sm:w-auto px-8 h-14 bg-[#08302a] hover:bg-[#051c18] rounded-full text-[15px]bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)]">
+              Book a Live Demo
+              <span className="ml-2 font-serif text-lg">→</span>
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto px-10 h-14 bg-white/50 hover:bg-white/80 border-primary/20">
-              See the platform
+            <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 h-14 bg-white hover:bg-white/80 bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)] shadow-sm rounded-full text-[#08302a] font-semibold text-[15px]">
+              See how it works
+              <span className="ml-2 text-[#08302a]/60">›</span>
             </Button>
           </motion.div>
 
           {/* Trust Markers */}
-          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-6 text-[13px] text-primary/60 font-medium">
+          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-x-8 gap-y-3 text-[14px] text-[#546a65] font-medium mt-2">
             <div className="flex items-center gap-2">
-              <Shield size={16} className="text-primary/40" />
+              <ShieldCheck size={18} strokeWidth={1.5} className="text-[#68827c]" />
               BAA on every account
             </div>
             <div className="flex items-center gap-2">
-              <Sparkles size={16} className="text-primary/40" />
+              <Sparkles size={18} strokeWidth={1.5} className="text-[#68827c]" />
               Citations on every fact
             </div>
             <div className="flex items-center gap-2">
-              <Activity size={16} className="text-primary/40" />
+              <Activity size={18} strokeWidth={1.5} className="text-[#68827c]" />
               96% attorney accuracy
             </div>
           </motion.div>
@@ -89,99 +100,128 @@ export function Hero() {
         {/* Right Column: Dashboard Mockup */}
         <motion.div
           variants={itemVariants}
-          className="relative w-full h-full min-h-[500px] flex items-center justify-center lg:justify-end"
+          className="relative w-full h-full min-h-[500px] flex items-center justify-center lg:justify-end mt-12 lg:mt-0"
         >
-          <GlassCard className="w-[95%] max-w-[600px] bg-white/70 backdrop-blur-2xl border-white/80 shadow-[0_20px_60px_rgba(0,0,0,0.05)] rounded-[32px] p-2 relative">
-            <div className="w-full h-full bg-[#FAFAFA] rounded-[24px] border border-black/5 shadow-inner overflow-hidden flex flex-col p-6">
-              
-              {/* Mockup Header */}
-              <div className="flex items-center justify-between border-b border-black/5 pb-4 mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 rounded-full bg-accent" />
-                  <span className="text-[10px] font-mono font-bold text-primary/50 tracking-widest uppercase">CASE · JIMENEZ v. ATLAS FREIGHT</span>
-                </div>
-                <span className="text-[10px] font-mono text-primary/40">421 pgs · 18 flags</span>
-              </div>
+          {/* Main Card */}
+          <div className="w-full max-w-[540px] bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)] rounded-[32px] p-8 relative">
 
-              {/* Stats Row */}
-              <div className="flex gap-4 mb-6">
-                <div className="flex-1 bg-[#F5F2ED] rounded-xl p-4 border border-black/5">
-                  <p className="text-[10px] font-mono font-bold text-primary/50 uppercase tracking-wider mb-2">Treatment Gaps</p>
-                  <p className="text-3xl font-sora font-bold text-primary">3</p>
+            {/* Mockup Header */}
+            <div className="flex items-center justify-between border-b border-[#08302a]/5 pb-6 mb-6">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-[#08302a] flex items-center justify-center text-white shadow-sm">
+                  <FileText size={18} />
                 </div>
-                <div className="flex-1 bg-[#F5F2ED] rounded-xl p-4 border border-black/5">
-                  <p className="text-[10px] font-mono font-bold text-primary/50 uppercase tracking-wider mb-2">Pre-existing</p>
-                  <p className="text-3xl font-sora font-bold text-primary">02</p>
+                <div>
+                  <h3 className="text-[15px] font-semibold text-[#08302a]">Ramirez v. TransLogix</h3>
+                  <p className="text-[12px] text-[#08302a]/50 font-medium">2,847 pages · 14 providers</p>
                 </div>
               </div>
+              <div className="flex items-center gap-1.5 bg-[#00c37a]/15 px-3 py-1.5 rounded-full">
+                <div className="w-1.5 h-1.5 rounded-full bg-[#00c37a]" />
+                <span className="text-[10px] font-bold text-[#08302a] tracking-widest uppercase">READY</span>
+              </div>
+            </div>
 
-              {/* List of Flags */}
-              <div className="space-y-3 mb-10">
-                <div className="flex items-center justify-between bg-white border border-black/5 rounded-full px-5 py-3 shadow-sm">
-                  <div className="flex items-center gap-3">
-                    <FileText size={16} className="text-primary/40" />
-                    <span className="text-sm font-medium text-primary">MRI L-Spine · Dr. Patel</span>
+            {/* AI-Generated Chronology */}
+            <div className="mb-8">
+              <h4 className="text-[10px] font-bold text-[#08302a]/40 uppercase tracking-[0.2em] mb-5">AI-GENERATED CHRONOLOGY</h4>
+
+              <div className="relative border-l-2 border-[#00c37a]/20 ml-2 space-y-5">
+
+                {/* Timeline Item 1 */}
+                <div className="relative pl-6">
+                  <div className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-[#00c37a]" />
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <p className="text-[11px] text-[#08302a]/60 font-medium mb-1">Mar 04 '24</p>
+                      <p className="text-[13px] font-semibold text-[#08302a]">ED Visit — Cedar Grove</p>
+                    </div>
+                    <span className="bg-[#08302a]/5 text-[#08302a]/60 text-[9px] font-bold tracking-wider px-2 py-1 rounded-md uppercase">INITIAL</span>
                   </div>
-                  <span className="text-xs font-mono text-primary/40">p. 47</span>
                 </div>
-                <div className="flex items-center justify-between bg-white border border-black/5 rounded-full px-5 py-3 shadow-sm relative overflow-hidden">
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-amber-500" />
-                  <div className="flex items-center gap-3">
-                    <AlertTriangle size={16} className="text-amber-500" />
-                    <span className="text-sm font-medium text-primary">Treatment gap · 42 days</span>
+
+                {/* Timeline Item 2 */}
+                <div className="relative pl-6">
+                  <div className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-[#00c37a]" />
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <p className="text-[11px] text-[#08302a]/60 font-medium mb-1">Mar 12 '24</p>
+                      <p className="text-[13px] font-semibold text-[#08302a]">MRI · Lumbar Spine</p>
+                    </div>
+                    <span className="bg-[#08302a]/5 text-[#08302a]/60 text-[9px] font-bold tracking-wider px-2 py-1 rounded-md uppercase">IMAGING</span>
                   </div>
-                  <span className="text-xs font-mono text-primary/40">p. 112-114</span>
                 </div>
-                <div className="flex items-center justify-between bg-white border border-black/5 rounded-full px-5 py-3 shadow-sm relative overflow-hidden">
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent" />
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 size={16} className="text-accent" />
-                    <span className="text-sm font-medium text-primary">Causation opinion · orthopedic</span>
+
+                {/* Timeline Item 3 */}
+                <div className="relative pl-6">
+                  <div className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-[#00c37a]" />
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <p className="text-[11px] text-[#08302a]/60 font-medium mb-1">May 20 '24</p>
+                      <p className="text-[13px] font-semibold text-[#08302a]">Ortho Consult — Dr. Hale</p>
+                    </div>
+                    <span className="bg-[#08302a]/5 text-[#08302a]/60 text-[9px] font-bold tracking-wider px-2 py-1 rounded-md uppercase">SURGERY REC.</span>
                   </div>
-                  <span className="text-xs font-mono text-primary/40">p. 203</span>
                 </div>
+
+              </div>
+            </div>
+
+            {/* Case Intelligence */}
+            <div>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  <Zap size={14} className="text-[#00c37a]" />
+                  <h4 className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-[0.2em]">CASE INTELLIGENCE</h4>
+                </div>
+                <span className="text-[10px] text-[#08302a]/40 font-medium">6 flags</span>
               </div>
 
-              <div className="mt-auto">
-                <span className="text-[10px] font-mono font-bold text-primary/40 tracking-widest uppercase">Chronology Assembly</span>
-                <div className="h-2 w-full bg-black/5 rounded-full mt-2 overflow-hidden">
-                  <div className="h-full w-3/4 bg-accent rounded-full" />
+              <div className="grid grid-cols-2 gap-3">
+                {/* Flag 1 */}
+                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_2px_8px_rgba(8,48,42,0.02)]">
+                  <Clock size={14} className="text-[#00c37a] mb-2" />
+                  <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Treatment Gap</p>
+                  <p className="text-[13px] font-bold text-[#08302a]">47 days</p>
+                </div>
+                {/* Flag 2 */}
+                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_2px_8px_rgba(8,48,42,0.02)]">
+                  <AlertTriangle size={14} className="text-[#00c37a] mb-2" />
+                  <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Surgery Rec.</p>
+                  <p className="text-[13px] font-bold text-[#08302a]">L4-L5 fusion</p>
+                </div>
+                {/* Flag 3 */}
+                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_2px_8px_rgba(8,48,42,0.02)]">
+                  <AlertTriangle size={14} className="text-[#00c37a] mb-2" />
+                  <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Degenerative</p>
+                  <p className="text-[13px] font-bold text-[#08302a]">Pre-incident</p>
+                </div>
+                {/* Flag 4 */}
+                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_2px_8px_rgba(8,48,42,0.02)]">
+                  <CheckCircle2 size={14} className="text-[#00c37a] mb-2" />
+                  <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Causation</p>
+                  <p className="text-[13px] font-bold text-[#08302a]">Strong</p>
                 </div>
               </div>
             </div>
 
-            {/* Floating AI Notification */}
-            <motion.div 
-              className="absolute top-20 -left-12 bg-white rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-black/5 p-5 w-[280px]"
+            {/* Floating Notification */}
+            <motion.div
+              className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-[0_16px_32px_rgba(8,48,42,0.08)] border border-white p-4 w-[240px] flex items-center gap-3"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: [0, -6, 0], opacity: 1 }}
-              transition={{ y: { duration: 5, repeat: Infinity, ease: "easeInOut" }, opacity: { delay: 0.8, duration: 0.5 } }}
+              transition={{ y: { duration: 6, repeat: Infinity, ease: "easeInOut" }, opacity: { delay: 0.8, duration: 0.5 } }}
             >
-              <div className="flex items-center gap-2 mb-2">
-                <Sparkles size={14} className="text-accent" />
-                <span className="text-[10px] font-bold text-accent tracking-widest uppercase">AI Ready</span>
+              <div className="w-10 h-10 rounded-full bg-[#00c37a]/15 flex items-center justify-center text-[#00c37a]">
+                <Zap size={18} />
               </div>
-              <p className="text-sm font-medium text-primary leading-tight">
-                Demand narrative generated for Jimenez.
-              </p>
-            </motion.div>
-
-            {/* Floating Timeline Graph */}
-            <motion.div 
-              className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.08)] border border-black/5 p-4"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: [0, 6, 0], opacity: 1 }}
-              transition={{ y: { duration: 6, repeat: Infinity, ease: "easeInOut" }, opacity: { delay: 1, duration: 0.5 } }}
-            >
-              <p className="text-[9px] font-mono font-bold text-primary/40 uppercase tracking-widest mb-3 text-center">Timeline</p>
-              <div className="flex items-end gap-1.5 h-12">
-                {[30, 40, 25, 50, 45, 70, 85, 100].map((h, i) => (
-                  <div key={i} className="w-2 bg-primary rounded-t-sm" style={{ height: `${h}%`, opacity: i === 7 ? 1 : 0.4 + (i * 0.05), backgroundColor: i > 5 ? '#10B981' : '#08383A' }} />
-                ))}
+              <div>
+                <p className="text-[13px] font-bold text-[#08302a]">Chronology ready</p>
+                <p className="text-[11px] text-[#08302a]/50 font-medium">Processed in 4m 12s</p>
               </div>
             </motion.div>
 
-          </GlassCard>
+          </div>
         </motion.div>
       </motion.div>
     </SectionContainer>

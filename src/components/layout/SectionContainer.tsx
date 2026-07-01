@@ -10,10 +10,10 @@ const SectionContainer = forwardRef<HTMLElement, SectionContainerProps>(
     return (
       <Component
         ref={ref as any}
-        className={cn("w-full py-24 md:py-32 relative", className)}
+        className={cn("w-full py-24 md:py-24 relative", className)}
         {...props}
       >
-        <div className="mx-auto w-full max-w-7xl px-6 md:px-8 lg:px-12 relative z-10">
+        <div className="w-full relative z-10">
           {children}
         </div>
       </Component>

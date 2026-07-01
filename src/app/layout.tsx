@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, Inter } from "next/font/google";
+import { Sora, Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const sora = Sora({
@@ -9,6 +9,11 @@ const sora = Sora({
 
 const inter = Inter({
   variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
 });
 
@@ -23,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sora.variable} ${inter.variable} antialiased scroll-smooth`}>
+    <html lang="en" className={`${sora.variable} ${inter.variable} ${playfair.variable} antialiased scroll-smooth`}>
       <body className="min-h-screen flex flex-col font-sans text-foreground bg-background-warm selection:bg-accent/20">
         {children}
       </body>
