@@ -18,7 +18,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "CaseChron AI | AI for Plaintiff PI Law Firms",
+  title: "Lex Value AI | AI for Plaintiff PI Law Firms",
   description: "HIPAA-compliant AI platform built specifically for Plaintiff Personal Injury Law Firms. Automate medical chronologies and litigation intelligence.",
 };
 
