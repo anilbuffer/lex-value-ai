@@ -50,7 +50,7 @@ export function Security() {
   };
 
   return (
-    <SectionContainer className="bg-background-warm py-24" id="security">
+    <SectionContainer className="bg-background-warm" id="security">
       <div className="w-full max-w-7xl mx-auto px-6">
 
         <div className="bg-[#08302a] rounded-[32px] p-8 md:p-12 lg:p-16 shadow-2xl relative overflow-hidden">

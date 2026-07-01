@@ -49,7 +49,7 @@ export function Compliance() {
   };
 
   return (
-    <SectionContainer className="py-16 bg-[#fafafa]">
+    <SectionContainer className="bg-[#fafafa]">
       <motion.div
         variants={containerVariants}
         initial="hidden"

@@ -6,7 +6,7 @@ import { Scale } from "lucide-react";
 
 export function FounderStory() {
   return (
-    <SectionContainer className="bg-background-warm py-24" id="founder-story">
+    <SectionContainer className="bg-background-warm" id="founder-story">
       <div className="w-full max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

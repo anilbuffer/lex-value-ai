@@ -58,7 +58,7 @@ export function AIWorkflow() {
   };
 
   return (
-    <SectionContainer className="bg-background-warm py-24" id="ai-pipeline">
+    <SectionContainer className="bg-background-warm" id="ai-pipeline">
       <div className="w-full max-w-7xl mx-auto px-6">
         
         {/* Header Section */}

@@ -33,7 +33,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(4);
 
   return (
-    <SectionContainer className="bg-background-warm py-24" id="faq">
+    <SectionContainer className="bg-background-warm" id="faq">
       <div className="w-full max-w-3xl mx-auto px-6">
 
         {/* Header Section */}

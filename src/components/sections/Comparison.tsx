@@ -49,7 +49,7 @@ export function Comparison() {
   };
 
   return (
-    <SectionContainer className="bg-background-warm py-24" id="comparison">
+    <SectionContainer className="bg-background-warm" id="comparison">
       <div className="w-full max-w-5xl mx-auto px-6">
 
         {/* Header Section */}
@@ -61,7 +61,7 @@ export function Comparison() {
 
           <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-[#08302a] leading-[1.055]">
             The manual workflow<br className="hidden md:block" />
-            vs. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">CaseChron AI.</span>
+            vs. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">Lex Value AI.</span>
           </h2>
         </div>
 

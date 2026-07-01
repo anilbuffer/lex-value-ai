@@ -34,7 +34,7 @@ export function Testimonials() {
   };
 
   return (
-    <SectionContainer className="bg-background-warm py-24" id="testimonials">
+    <SectionContainer className="bg-background-warm" id="testimonials">
       <div className="w-full max-w-7xl mx-auto px-6">
         
         {/* Header Section */}

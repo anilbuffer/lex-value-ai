@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { Gavel } from "lucide-react";
+import { Umbrella } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Navigation() {
@@ -28,16 +28,39 @@ export function Navigation() {
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center gap-2.5 pl-1">
           <div className="bg-[#08302a] text-[#00c37a] p-2 rounded-full flex items-center justify-center shadow-[0_0_12px_rgba(0,195,122,0.3)]">
-            <Gavel size={18} strokeWidth={2} />
+            <Umbrella size={18} strokeWidth={2} />
           </div>
           <span className="font-bold text-[17px] tracking-tight text-[#08302a]">LexValue<span className="text-[#00c37a]">.AI</span></span>
         </div>
 
         <nav className="hidden md:flex items-center gap-8 font-medium text-sm text-[#4a5f58]">
-          <a href="#platform" className="hover:text-[#08302a] transition-colors">Platform</a>
-          <a href="#intelligence" className="hover:text-[#08302a] transition-colors">Intelligence</a>
-          <a href="#how-it-works" className="hover:text-[#08302a] transition-colors">How it works</a>
-          <a href="#pricing" className="hover:text-[#08302a] transition-colors">Pricing</a>
+          {[
+            { name: "Platform", id: "platform" },
+            { name: "Intelligence", id: "case-intelligence" },
+            { name: "How it works", id: "ai-pipeline" },
+            { name: "Pricing", id: "pricing" },
+          ].map((item) => (
+            <a
+              key={item.id}
+              href={`#${item.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById(item.id);
+                if (element) {
+                  const navHeight = 100;
+                  const elementPosition = element.getBoundingClientRect().top;
+                  const offsetPosition = elementPosition + window.scrollY - navHeight;
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                  });
+                }
+              }}
+              className="hover:text-[#08302a] transition-colors"
+            >
+              {item.name}
+            </a>
+          ))}
         </nav>
 
         <div className="flex items-center gap-6 pr-1">

@@ -15,9 +15,9 @@
   
   --font-sora: var(--font-sora);
   --font-roboto: var(--font-roboto);
-  --font-display: var(--font-playfair), "Playfair Display", ui-serif, Georgia, serif;
+  --font-display: var(--font-lora), "Lora", ui-serif, Georgia, serif;
   --font-sans: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-playfair), "Playfair Display", ui-serif, Georgia, serif;
+  --font-serif: var(--font-lora), "Lora", ui-serif, Georgia, serif;
 }
 
 @layer base {
@@ -31,8 +31,6 @@
     color: var(--color-body-text);
     font-family: var(--font-roboto), sans-serif;
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, Playfair_Display, Roboto } from "next/font/google";
+import { Sora, Lora, Roboto } from "next/font/google";
 import "./globals.css";
 
 const sora = Sora({
@@ -10,12 +10,13 @@ const sora = Sora({
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["300", "400", "500", "700", "900"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -29,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sora.variable} ${roboto.variable} ${playfair.variable} antialiased scroll-smooth`}>
+    <html lang="en" className={`${sora.variable} ${roboto.variable} ${lora.variable} scroll-smooth`}>
       <body className="min-h-screen flex flex-col font-sans text-foreground bg-background-warm selection:bg-accent/20">
         {children}
       </body>

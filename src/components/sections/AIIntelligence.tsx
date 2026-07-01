@@ -58,7 +58,7 @@ export function AIIntelligence() {
   };
 
   return (
-    <SectionContainer className="bg-background-warm py-24" id="case-intelligence">
+    <SectionContainer className="bg-background-warm" id="case-intelligence">
       <div className="w-full max-w-7xl mx-auto px-6">
         
         {/* Header Section */}

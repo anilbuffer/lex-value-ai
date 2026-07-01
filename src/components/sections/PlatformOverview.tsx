@@ -58,7 +58,7 @@ export function PlatformOverview() {
   };
 
   return (
-    <SectionContainer className="bg-background-warm py-24" id="platform">
+    <SectionContainer className="bg-background-warm" id="platform">
       <div className="w-full max-w-7xl mx-auto px-6">
         
         {/* Header Section */}
