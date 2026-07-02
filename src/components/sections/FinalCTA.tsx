@@ -8,7 +8,7 @@ import { Sparkles } from "lucide-react";
 export function FinalCTA() {
   return (
     <SectionContainer className="bg-background-warm pb-16 md:pb-24" id="cta">
-      <div className="w-full max-w-7xl mx-auto px-6">
+      <div className="w-full max-w-6xl mx-auto px-6">
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

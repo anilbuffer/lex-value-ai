@@ -26,30 +26,30 @@ export default function Home() {
       <Hero />
       {/* <SectionDivider /> */}
       <ScrollReveal className="w-full"><Compliance /></ScrollReveal>
-      <SectionDivider />
-      <ScrollReveal className="w-full"><ProductPreview /></ScrollReveal>
       {/* <SectionDivider /> */}
       <ScrollReveal className="w-full"><Problem /></ScrollReveal>
       <SectionDivider />
-      <ScrollReveal className="w-full"><WorkflowROI /></ScrollReveal>
-      {/* <SectionDivider /> */}
-      <ScrollReveal className="w-full"><FounderStory /></ScrollReveal>
-      {/* <SectionDivider /> */}
-      <ScrollReveal className="w-full"><PlatformOverview /></ScrollReveal>
+      <ScrollReveal className="w-full"><Comparison /></ScrollReveal>
       <SectionDivider />
       <ScrollReveal className="w-full"><AIIntelligence /></ScrollReveal>
       <SectionDivider />
-      <ScrollReveal className="w-full"><AIWorkflow /></ScrollReveal>
+      <ScrollReveal className="w-full"><FounderStory /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><ProductPreview /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><PlatformOverview /></ScrollReveal>
       <SectionDivider />
       <ScrollReveal className="w-full"><Security /></ScrollReveal>
       <SectionDivider />
-      <ScrollReveal className="w-full"><Comparison /></ScrollReveal>
+      <ScrollReveal className="w-full"><AIWorkflow /></ScrollReveal>
       <SectionDivider />
       <ScrollReveal className="w-full"><Roles /></ScrollReveal>
       <SectionDivider />
-      <ScrollReveal className="w-full"><Pricing /></ScrollReveal>
-      {/* <SectionDivider /> */}
+      <ScrollReveal className="w-full"><WorkflowROI /></ScrollReveal>
+      <SectionDivider />
       <ScrollReveal className="w-full"><Testimonials /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><Pricing /></ScrollReveal>
       <SectionDivider />
       <ScrollReveal className="w-full"><FAQ /></ScrollReveal>
       <SectionDivider />

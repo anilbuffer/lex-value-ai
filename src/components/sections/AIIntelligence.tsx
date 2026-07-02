@@ -113,7 +113,7 @@ export function AIIntelligence() {
             >
               {/* Top Row: Icon & Confidence Pill */}
               <div className="flex items-center justify-between mb-8">
-                <div className="w-10 h-10 rounded-xl bg-[#e6f4ef] flex items-center justify-center text-[#08302a]">
+                <div className="section-icon">
                   <flag.icon size={18} strokeWidth={1.5} />
                 </div>
                 <div className={`px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase ${confColors[flag.conf.color as keyof typeof confColors]}`}>

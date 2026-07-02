@@ -133,7 +133,7 @@ export function Problem() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="bg-[#FAFAFA] rounded-[24px] p-5 shadow-[0_2px_12px_rgb(0,0,0,0.03)] flex flex-col gap-4 border border-white"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-[16px] bg-[#e6f4ef] flex items-center justify-center text-[#08302a]">
+              <div className="section-icon">
                 <item.icon size={20} strokeWidth={2} />
               </div>
               <div>

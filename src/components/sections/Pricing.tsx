@@ -101,17 +101,27 @@ export function Pricing() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`rounded-[24px] p-8 md:p-10 flex flex-col h-full relative ${plan.theme === 'dark'
-                ? 'bg-[#0f342d] border border-[#0f342d] shadow-[0_32px_64px_rgba(15,52,45,0.2)] text-white'
+                ? 'bg-[#08302a] bg-gradient-to-br from-[#12604f] via-[#08302a] to-[#020d0b] border border-[#00c37a]/20 shadow-2xl text-white overflow-hidden'
                 : 'bg-[#fcfbf9] border border-white shadow-sm text-[#08302a]'
                 }`}
             >
               {plan.badge && (
-                <div className="absolute top-8 right-8 bg-[#155145] text-[#14b87e] px-4 py-1.5 rounded-full text-[10px] font-bold tracking-wider uppercase">
+                <div className="absolute top-8 right-8 bg-[#155145] text-[#14b87e] px-4 py-1.5 rounded-full text-[10px] font-bold tracking-wider uppercase z-20">
                   {plan.badge}
                 </div>
               )}
 
-              {/* Header */}
+              {/* Subtle Glow Background for dark theme */}
+              {plan.theme === 'dark' && (
+                <>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#00c37a]/20 rounded-full blur-[80px] pointer-events-none z-0" />
+                  <div className="absolute -top-[10%] -left-[10%] w-[150px] h-[150px] bg-[#00c37a]/25 blur-[60px] rounded-full pointer-events-none z-0" />
+                </>
+              )}
+
+              {/* Content Wrapper */}
+              <div className="relative z-10 flex flex-col h-full">
+                {/* Header */}
               <div className="mb-8">
                 <h3 className={`text-[22px] font-medium mb-2 ${plan.theme === 'dark' ? 'text-white' : 'text-[#08302a]'}`}>
                   {plan.name}
@@ -163,7 +173,8 @@ export function Pricing() {
                   }`}
               >
                 {plan.btnText}
-              </Button>
+                </Button>
+              </div>
 
             </motion.div>
           ))}
