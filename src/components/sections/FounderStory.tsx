@@ -2,72 +2,45 @@
 
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { motion } from "framer-motion";
-import { Scale } from "lucide-react";
 
 export function FounderStory() {
   return (
     <SectionContainer className="bg-background-warm" id="founder-story">
-      <div className="w-full max-w-7xl mx-auto px-6">
+      <div className="w-full max-w-[1000px] mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.04),0_16px_24px_rgba(8,48,42,0.02)] rounded-[32px] p-8 md:p-12 lg:p-16"
+          className="bg-white border border-white shadow-[0_8px_40px_rgba(0,0,0,0.03)] rounded-[32px] md:rounded-[48px] p-8 md:p-16 lg:p-20 relative overflow-hidden flex flex-col items-center text-center"
         >
-          <div className="grid lg:grid-cols-[1fr_1.3fr] gap-12 lg:gap-20 items-center">
+          {/* Subtle top-left green glow */}
+          <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-[#e6f4ef] rounded-full blur-[80px] pointer-events-none opacity-80" />
 
-            {/* Left Column - Dark Card */}
-            <div className="bg-[#08302a] bg-gradient-to-br from-[#12604f] via-[#08302a] to-[#020d0b] border border-[#00c37a]/20 rounded-[24px] p-12 md:p-16 flex flex-col items-center justify-center text-center relative overflow-hidden shadow-xl aspect-square lg:aspect-auto lg:h-[480px]">
-              {/* Subtle background glow */}
-              <div className="absolute top-0 left-0 w-[150%] h-[60%] bg-gradient-to-b from-[#00c37a]/30 to-transparent opacity-80 pointer-events-none -translate-x-1/4 -translate-y-1/2 blur-[100px]" />
-              <div className="absolute -bottom-[20%] -right-[10%] w-[80%] h-[80%] bg-[#00c37a]/20 blur-[120px] rounded-full pointer-events-none" />
-
-              <div className="relative z-10 flex flex-col items-center gap-8">
-                <div className="text-[#00c37a]">
-                  <Scale size={56} strokeWidth={1.5} />
-                </div>
-                <h3 className="font-display text-[28px] md:text-[32px] leading-tight text-[#ffffff] font-medium max-w-[280px]">
-                  Built for plaintiffs.<br />
-                  Defense perspective.
-                </h3>
-              </div>
+          <div className="relative z-10 w-full flex flex-col items-center">
+            {/* Top Pill */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)] mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00c37a]"></span>
+              <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">FOUNDER CREDIBILITY</span>
             </div>
 
-            {/* Right Column - Content */}
-            <div className="flex flex-col items-start text-left max-w-2xl">
-              {/* Top Pill */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white bg-[#FAFAFA] border border-[#08302a]/10 shadow-sm mb-8">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#00c37a]"></span>
-                <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">Founder Story</span>
+            {/* Quote */}
+            <h2 className="font-display text-[24px] md:text-[32px] lg:text-[36px] tracking-tight text-[#08302a] leading-[1.3] md:leading-[1.4] font-medium max-w-[800px] mb-12">
+              “Built by professionals with deep experience on the defense side of personal injury litigation — bringing the exact institutional knowledge insurers use internally directly into plaintiff workflows.”
+            </h2>
+
+            {/* Signature Block */}
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-[#123e35] flex items-center justify-center text-white font-medium tracking-wide">
+                LV
               </div>
-
-              {/* Heading */}
-              <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
-                I spent a decade helping <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">insurance carriers</span> pay you <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">less</span>.
-              </h2>
-
-              {/* Paragraphs */}
-              <div className="text-lg md:text-[16px] text-[#08302a]/80 font-medium leading-[1.6] space-y-6 mb-10 max-w-[540px]">
-                <p>
-                  Every adjuster has a checklist. Every defense counsel has a playbook. Gaps. Priors. Degenerative language. Hedged causation. That's how a <strong className="text-[#08302a] font-bold">$1.4M case becomes $340k</strong> — not through argument, but through what plaintiff's counsel didn't catch first.
-                </p>
-                <p>
-                  Lex Value AI is that checklist — inverted. The same lens, running for you, on every case, before the demand goes out.
-                </p>
+              <div className="flex flex-col text-left">
+                <span className="text-[15px] font-medium text-[#123e35]">Lex Value AI Founding Team</span>
+                <span className="text-[13px] font-medium text-[#546a65]">Former Defense-Side PI Evaluators</span>
               </div>
-
-              {/* Signature Block */}
-              <div className="flex items-center gap-4 border-l-2 border-[#00c37a] pl-4">
-                <div>
-                  <h4 className="text-[15px] font-bold text-[#08302a]">John Smith</h4>
-                  <p className="text-[13px] text-[#08302a]/50 font-medium">Founder · Former Senior Claims Counsel</p>
-                </div>
-              </div>
-
             </div>
-
           </div>
+
         </motion.div>
       </div>
     </SectionContainer>

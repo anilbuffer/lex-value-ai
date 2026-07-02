@@ -2,38 +2,45 @@
 
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { X, Check } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const comparisonData = [
   {
-    workflow: "Time from upload to chronology",
-    manual: "3–7 days",
-    ai: "4 minutes"
+    capability: "Time to chronology",
+    manual: "3–6 weeks",
+    generic: "Hours + hallucinations",
+    lexvalue: "Minutes, source-cited"
   },
   {
-    workflow: "Defense-side flag detection",
-    manual: "Manual, inconsistent",
-    ai: "Automatic, every case"
+    capability: "Source citations",
+    manual: "Manual",
+    generic: "Rare or fabricated",
+    lexvalue: "Every claim, page-linked"
   },
   {
-    workflow: "Source-page citations",
-    manual: "Sometimes",
-    ai: "Every claim, always"
+    capability: "Defense-perspective flags",
+    manual: "—",
+    generic: "—",
+    lexvalue: "Six, automatic"
   },
   {
-    workflow: "HIPAA architecture",
-    manual: "General cloud tools",
-    ai: "BAA-covered, PHI-walled"
+    capability: "PHI handling",
+    manual: "Manual redaction",
+    generic: "Sent raw to LLM",
+    lexvalue: "Tokenized before LLM"
   },
   {
-    workflow: "Cost per average case",
-    manual: "$3,800+ paralegal",
-    ai: "Fixed monthly seat"
+    capability: "HIPAA + BAA",
+    manual: "Firm's responsibility",
+    generic: "Rarely",
+    lexvalue: "Built-in"
   },
   {
-    workflow: "Firm-wide role dashboards",
-    manual: "Ad-hoc",
-    ai: "Native workflow"
+    capability: "Human review",
+    manual: "Every line",
+    generic: "None",
+    lexvalue: "Drafts, attorney-approved"
   }
 ];
 
@@ -43,70 +50,81 @@ export function Comparison() {
     visible: { opacity: 1, transition: { duration: 0.6 } },
   };
 
-  const rowVariants = {
-    hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-  };
-
   return (
-    <SectionContainer className="bg-background-warm" id="comparison">
-      <div className="w-full max-w-5xl mx-auto px-6">
+    <SectionContainer className="bg-background-warm relative overflow-hidden" id="comparison">
+      {/* Centered background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#00c37a]/15 blur-[120px] rounded-[100%] pointer-events-none" />
+
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-6 relative z-10">
 
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)] mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)] mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00c37a]"></span>
-            <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">Comparison</span>
+            <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">WHY lexvalue AI</span>
           </div>
 
-          <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-[#08302a] leading-[1.055]">
-            The manual workflow<br className="hidden md:block" />
-            vs. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">Lex Value AI.</span>
+          <h2 className="font-display text-[36px] md:text-[48px] lg:text-[52px] tracking-tight text-[#08302a] leading-[1.055] max-w-3xl mx-auto mb-8">
+            We don't just summarize. We think<br className="hidden md:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">like the defense.</span>
           </h2>
         </div>
 
-        {/* Comparison Table */}
+        {/* Table Container */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.04),0_16px_24px_rgba(8,48,42,0.02)] rounded-[32px] overflow-hidden"
+          className="bg-white rounded-[24px] p-2 md:p-3 shadow-sm border border-white overflow-x-auto"
         >
-          {/* Table Header */}
-          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-4 px-8 py-5 bg-[#08302a]">
-            <div className="text-[11px] font-bold text-white/70 uppercase tracking-widest">Workflow</div>
-            <div className="hidden md:block text-[11px] font-bold text-white/70 uppercase tracking-widest">Manual Review</div>
-            <div className="hidden md:block text-[11px] font-bold text-white uppercase tracking-widest">Lex Value AI</div>
-          </div>
+          <div className="min-w-[800px] grid grid-cols-[1.5fr_1fr_1fr_1.2fr]">
 
-          {/* Table Rows */}
-          <div className="flex flex-col bg-[#FAFAFA]">
-            {comparisonData.map((row, index) => (
-              <motion.div
-                key={index}
-                variants={rowVariants}
-                className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] gap-4 px-8 py-5 border-b border-[#08302a]/5 last:border-b-0 items-center hover:bg-white transition-colors"
-              >
-                {/* Column 1 */}
-                <div className="text-[15px] font-semibold text-[#08302a]">
-                  {row.workflow}
-                </div>
+            {/* Headers */}
+            <div className="px-6 py-4 text-[11px] font-bold text-[#869591] uppercase tracking-widest border-b border-gray-100">
+              CAPABILITY
+            </div>
+            <div className="px-6 py-4 text-[11px] font-bold text-[#869591] uppercase tracking-widest border-b border-gray-100">
+              MANUAL REVIEW
+            </div>
+            <div className="px-6 py-4 text-[11px] font-bold text-[#869591] uppercase tracking-widest border-b border-gray-100">
+              GENERIC AI
+            </div>
+            <div className="px-8 py-4 text-[11px] font-bold text-white uppercase tracking-widest bg-[#123e35] rounded-t-[24px] border-b border-white/10">
+              lexvalue AI
+            </div>
 
-                {/* Column 2 */}
-                <div className="text-[14px] font-medium text-[#08302a]/50 flex items-center gap-2">
-                  <span className="md:hidden text-[11px] font-bold text-[#08302a]/40 uppercase tracking-widest mr-2">Manual:</span>
-                  {row.manual}
-                </div>
+            {/* Data Rows */}
+            {comparisonData.map((row, index) => {
+              const isLast = index === comparisonData.length - 1;
+              return (
+                <div key={index} className="contents group">
+                  {/* Capability Column */}
+                  <div className={cn("px-6 py-4 md:py-4 flex items-center text-[14px] md:text-[15px] font-semibold text-[#1f3a34]", !isLast && "border-b border-gray-100")}>
+                    {row.capability}
+                  </div>
 
-                {/* Column 3 */}
-                <div className="text-[14px] font-semibold text-[#08302a] flex items-center gap-2.5">
-                  <span className="md:hidden text-[11px] font-bold text-[#00c37a] uppercase tracking-widest mr-2">AI:</span>
-                  <CheckCircle2 size={16} className="text-[#00c37a]" strokeWidth={2.5} />
-                  {row.ai}
+                  {/* Manual Column */}
+                  <div className={cn("px-6 py-4 md:py-4 flex items-center gap-3 text-[14px] md:text-[15px] font-medium text-[#7a8a86]", !isLast && "border-b border-gray-100")}>
+                    <X size={14} strokeWidth={2.5} className="text-[#a0ada9] shrink-0" />
+                    {row.manual}
+                  </div>
+
+                  {/* Generic Column */}
+                  <div className={cn("px-6 py-4 md:py-4 flex items-center gap-3 text-[14px] md:text-[15px] font-medium text-[#7a8a86]", !isLast && "border-b border-gray-100")}>
+                    <X size={14} strokeWidth={2.5} className="text-[#a0ada9] shrink-0" />
+                    {row.generic}
+                  </div>
+
+                  {/* lexvalue Column */}
+                  <div className={cn("px-8 py-4 md:py-4 flex items-center gap-3 text-[14px] md:text-[15px] font-semibold text-white bg-[#123e35]", !isLast && "border-b border-white/10", isLast && "rounded-b-[24px]")}>
+                    <Check size={16} strokeWidth={3} className="text-[#00c37a] shrink-0" />
+                    {row.lexvalue}
+                  </div>
                 </div>
-              </motion.div>
-            ))}
+              );
+            })}
+
           </div>
         </motion.div>
 

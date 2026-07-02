@@ -65,7 +65,7 @@ export function Navigation() {
 
         <div className="flex items-center gap-6 pr-1">
           <a href="#login" className="hidden md:block font-medium text-sm text-[#4a5f58] hover:text-[#08302a] transition-colors">Sign in</a>
-          <Button size="sm" className="rounded-full bg-[#08302a] hover:bg-[#051c18] text-white px-6 py-2.5 h-auto text-sm font-medium border border-[#00c37a]/30 shadow-[0_0_15px_rgba(0,195,122,0.4)] hover:shadow-[0_0_25px_rgba(0,195,122,0.6)] transition-all duration-300">Request demo</Button>
+          <Button size="sm" className="rounded-2xl bg-gradient-to-r from-[#0F4C43] to-[#12a170] hover:from-[#0c3e36] hover:to-[#0f8b60] text-white px-6 py-2.5 h-auto text-sm font-semibold border-none shadow-[0_4px_15px_rgba(18,161,112,0.25)] transition-all duration-300">Request demo</Button>
         </div>
       </div>
     </motion.header>

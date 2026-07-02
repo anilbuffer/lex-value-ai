@@ -9,8 +9,8 @@ export function FinalCTA() {
   return (
     <SectionContainer className="bg-background-warm pb-16 md:pb-24" id="cta">
       <div className="w-full max-w-7xl mx-auto px-6">
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -25,15 +25,15 @@ export function FinalCTA() {
             {/* Pill */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00c37a]/30 mb-8 bg-[#00c37a]/10">
               <Sparkles size={12} className="text-[#00c37a]" strokeWidth={2.5} />
-              <span className="text-[10px] font-bold text-[#00c37a] uppercase tracking-widest">Ready when your next case lands</span>
+              <span className="text-[10px] font-bold text-[#00c37a] uppercase tracking-widest">Ready to see it on a real case?</span>
             </div>
-            
+
             {/* Heading */}
             <h2 className="font-display text-[40px] md:text-[56px] lg:text-[72px] tracking-tight text-white leading-[1.055] mb-8">
-              Stop <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#00e08c]">reading records.</span><br className="hidden md:block" />
-              Start <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#00e08c]">winning them.</span>
+              Give your firm the same <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#00e08c]">analytical advantage</span><br className="hidden md:block" />
+              the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#00e08c]">defense</span>already has.
             </h2>
-            
+
             {/* Paragraph */}
             <p className="text-lg md:text-[18px] text-white/80 font-medium leading-[1.6] max-w-2xl mb-12">
               30-minute live demo on one of your real cases. Under NDA, in your AWS sandbox, with your records — no synthetic data theater.
@@ -41,25 +41,24 @@ export function FinalCTA() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-              <Button 
-                size="lg" 
-                className="w-full sm:w-auto px-8 h-14 bg-[#00c37a] hover:bg-[#00e08c] text-[#08302a] rounded-full text-[15px] font-semibold shadow-[0_0_24px_rgba(0,195,122,0.4)] transition-all"
+              <Button
+                size="lg"
+                className="w-full sm:w-auto px-8 h-14 bg-gradient-to-r from-[#0F4C43] to-[#12a170] hover:from-[#0c3e36] hover:to-[#0f8b60] text-white rounded-2xl text-[15px] font-semibold shadow-[0_8px_24px_rgba(18,161,112,0.25)] transition-all duration-300 border-none"
               >
-                Book a Live Demo
-                <span className="ml-2 font-serif text-lg">→</span>
+                Book a Personalized Demo
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="w-full sm:w-auto px-8 h-14 bg-white/5 hover:bg-white/10 border-white/20 text-white rounded-full text-[15px] font-medium transition-all"
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto px-8 h-14 bg-white/5 hover:bg-white/10 border-white/20 text-white rounded-2xl text-[15px] font-medium transition-all"
               >
-                Review our security architecture
+                Schedule Consultation
               </Button>
             </div>
           </div>
-          
+
         </motion.div>
-        
+
       </div>
     </SectionContainer>
   );

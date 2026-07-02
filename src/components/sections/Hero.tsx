@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { Shield, Lock, FileCheck, Users, Clock, AlertTriangle, FileText, CheckCircle2, Zap, ShieldCheck, Sparkles, Activity } from "lucide-react";
+import { Shield, Lock, FileCheck, Users, Clock, AlertTriangle, FileText, CheckCircle2, Zap, ShieldCheck, Sparkles, Activity, PlayCircle } from "lucide-react";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 
 export function Hero() {
@@ -46,41 +46,39 @@ export function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="w-full max-w-7xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-8 lg:gap-10 items-center relative z-10"
+        className="w-full max-w-7xl mx-auto grid lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-16 items-center relative z-10"
       >
         {/* Left Column */}
         <div className="flex flex-col items-start text-left max-w-2xl">
           {/* Top Pill */}
           <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)] mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00c37a]" />
-            <span className="text-[10px] font-bold text-[#08302a]/70">HIPAA-COMPLIANT <span className="mx-1 text-[#08302a]/30">·</span> BUILT FOR PLAINTIFF PI FIRMS</span>
+            <span className="text-[10px] font-bold text-[#08302a]/70">HIPAA-Compliant <span className="mx-1 text-[#08302a]/30">·</span> AI for Plaintiff Law Firms</span>
           </motion.div>
 
           {/* Headline */}
           <motion.h1 variants={itemVariants} className="font-display text-[36px] md:text-[48px] lg:text-[60px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
-            Medical record review <br className="hidden md:block" />
-            <span className="font-medium relative inline-block">
-              <span className="bg-gradient-to-r from-[#08302a] to-[#00c37a] bg-clip-text text-transparent">reimagined</span>
+            Give your firm the  <br className="hidden md:block" />
+            <span className="font-medium relative inline-block">same{''}
+              <span className="bg-gradient-to-r from-[#08302a] to-[#00c37a] bg-clip-text text-transparent">{''} intelligence</span>
               <span className="absolute inset-0 bg-[#00c37a]/15 blur-2xl rounded-full -z-10 transform scale-120" />
-            </span> for
-            <span className="bg-gradient-to-r from-[#00c37a] to-[#08302a] px-1 bg-clip-text text-transparent"> plaintiff</span> firms.
+            </span>  the defense already has.
 
           </motion.h1>
 
           {/* Subtext */}
           <motion.p variants={itemVariants} className="text-lg md:text-[16px] text-[#08302a]/80 mb-10 font-medium leading-[1.6] max-w-[540px]">
-            LexValue AI turns unruly medical records into structured chronologies, litigation-critical case flags, and narrative summaries — encoded with the same analytical lens insurance defense uses to devalue your cases.
+            Turn thousands of pages of medical records into defense-informed chronologies, litigation intelligence, and demand-ready summaries — in minutes instead of days.
           </motion.p>
 
           {/* Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 mb-12 w-full sm:w-auto">
-            <Button size="lg" className="w-full sm:w-auto px-8 h-14 bg-[#08302a] hover:bg-[#051c18] text-white rounded-full text-[15px] shadow-[0_8px_24px_rgba(8,48,42,0.2)] transition-shadow duration-300">
-              Book a Live Demo
-              <span className="ml-2 font-serif text-lg">→</span>
+            <Button size="lg" className="w-full sm:w-auto px-8 h-14 bg-gradient-to-r from-[#0F4C43] to-[#12a170] hover:from-[#0c3e36] hover:to-[#0f8b60] text-white rounded-2xl text-[15px] font-semibold shadow-[0_8px_24px_rgba(18,161,112,0.25)] transition-all duration-300 border-none">
+              Book Demo
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 h-14 bg-white hover:bg-gray-50 border border-[#00c37a] shadow-[0_8px_24px_rgba(8,48,42,0.1)] rounded-full text-[#00c37a] font-semibold text-[15px] transition-shadow duration-300">
-              See how it works
-              <span className="ml-2 text-[#00c37a]/60">›</span>
+            <Button size="lg" variant="outline" className="w-full sm:w-auto px-8 h-14 bg-white hover:bg-gray-50 border-none shadow-[0_4px_24px_rgba(8,48,42,0.06)] rounded-2xl text-[#08302a] font-semibold text-[15px] transition-all duration-300 flex items-center gap-2">
+              <PlayCircle size={18} className="text-[#12a170]" strokeWidth={2} />
+              Watch Product Tour
             </Button>
           </motion.div>
 

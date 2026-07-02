@@ -1,14 +1,16 @@
 import { Navigation } from "@/components/sections/Navigation";
 import { Hero } from "@/components/sections/Hero";
+import { ProductPreview } from "@/components/sections/ProductPreview";
 import { Compliance } from "@/components/sections/Compliance";
 import { Problem } from "@/components/sections/Problem";
-import { Metrics } from "@/components/sections/Metrics";
+import { WorkflowROI } from "@/components/sections/WorkflowROI";
 import { FounderStory } from "@/components/sections/FounderStory";
 import { PlatformOverview } from "@/components/sections/PlatformOverview";
 import { AIIntelligence } from "@/components/sections/AIIntelligence";
 import { AIWorkflow } from "@/components/sections/AIWorkflow";
 import { Security } from "@/components/sections/Security";
 import { Comparison } from "@/components/sections/Comparison";
+import { Roles } from "@/components/sections/Roles";
 import { Pricing } from "@/components/sections/Pricing";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
@@ -24,10 +26,12 @@ export default function Home() {
       <Hero />
       {/* <SectionDivider /> */}
       <ScrollReveal className="w-full"><Compliance /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><ProductPreview /></ScrollReveal>
       {/* <SectionDivider /> */}
       <ScrollReveal className="w-full"><Problem /></ScrollReveal>
       <SectionDivider />
-      <ScrollReveal className="w-full"><Metrics /></ScrollReveal>
+      <ScrollReveal className="w-full"><WorkflowROI /></ScrollReveal>
       {/* <SectionDivider /> */}
       <ScrollReveal className="w-full"><FounderStory /></ScrollReveal>
       {/* <SectionDivider /> */}
@@ -40,6 +44,8 @@ export default function Home() {
       <ScrollReveal className="w-full"><Security /></ScrollReveal>
       <SectionDivider />
       <ScrollReveal className="w-full"><Comparison /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><Roles /></ScrollReveal>
       <SectionDivider />
       <ScrollReveal className="w-full"><Pricing /></ScrollReveal>
       {/* <SectionDivider /> */}

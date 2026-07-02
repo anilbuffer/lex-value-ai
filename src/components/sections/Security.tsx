@@ -2,38 +2,42 @@
 
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { motion } from "framer-motion";
-import { Shield, Lock, Fingerprint, Activity, Server, Brain } from "lucide-react";
+import { ShieldCheck, Key, Fingerprint, FileText, Database, Server, ArrowRight } from "lucide-react";
 
 const securityFeatures = [
   {
-    icon: Lock,
-    text: "AES-256 at rest, TLS 1.3 in transit"
+    icon: ShieldCheck,
+    title: "HIPAA Compliant",
+    description: "BAA-backed across every AWS service touching PHI."
   },
   {
-    icon: Shield,
-    text: "AWS BAA executed across S3, RDS, Cognito, Textract, CloudWatch"
+    icon: Key,
+    title: "AES-256 & TLS 1.3",
+    description: "Encrypted at rest and in transit, end to end."
   },
   {
     icon: Fingerprint,
-    text: "Row-level tenant isolation in PostgreSQL"
+    title: "PHI Tokenization",
+    description: "Raw PHI never enters an LLM prompt. Ever."
   },
   {
-    icon: Activity,
-    text: "Immutable audit log · 6-year retention"
+    icon: FileText,
+    title: "Audit Logging",
+    description: "Append-only logs retained six years minimum."
+  },
+  {
+    icon: Database,
+    title: "Row-Level Security",
+    description: "Tenant isolation enforced in PostgreSQL."
   },
   {
     icon: Server,
-    text: "Deploys to your AWS account - you own the infrastructure"
-  },
-  {
-    icon: Brain,
-    text: "PHI tokenized before LLM - never used for model training"
+    title: "Your AWS Account",
+    description: "Deploy to infrastructure you own and control."
   }
 ];
 
-const badges = [
-  "HIPAA", "AWS BAA", "AES-256", "TLS 1.3", "PHI WALL", "6-YR AUDIT"
-];
+const workflowSteps = ["Upload", "Tokenize", "Vector", "AI", "Review"];
 
 export function Security() {
   const containerVariants = {
@@ -45,89 +49,68 @@ export function Security() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, x: 20 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
   return (
     <SectionContainer className="bg-background-warm" id="security">
-      <div className="w-full max-w-7xl mx-auto px-6">
-
-        <div className="bg-[#08302a] bg-gradient-to-br from-[#12604f] via-[#08302a] to-[#020d0b] border border-[#00c37a]/20 rounded-[32px] p-8 md:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
-          {/* Subtle glowing effects */}
-          <div className="absolute -top-[20%] -left-[10%] w-[60%] h-[100%] bg-[#00c37a]/25 blur-[140px] rounded-full pointer-events-none" />
-          <div className="absolute -bottom-[20%] -right-[10%] w-[60%] h-[100%] bg-[#00c37a]/20 blur-[140px] rounded-full pointer-events-none" />
+      <div className="w-full max-w-[1100px] mx-auto px-6">
+        
+        <div className="bg-[#0f342d] rounded-[32px] md:rounded-[40px] p-8 md:p-12 lg:p-14 shadow-xl">
           
-          {/* Subtle dot pattern background */}
-          <div
-            className="absolute inset-0 opacity-[0.15]"
-            style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '24px 24px' }}
-          />
-
-          <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center relative z-10">
-
-            {/* Left Column */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col items-start text-left max-w-2xl"
-            >
-              {/* Pill */}
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00c37a]/40 mb-8 bg-[#00c37a]/10">
-                <Shield size={12} className="text-[#00c37a]" strokeWidth={2.5} />
-                <span className="text-[10px] font-bold text-[#00c37a] uppercase tracking-widest">Security & Compliance</span>
-              </div>
-
-              {/* Heading */}
-              <h2 className="font-display text-[36px] md:text-[48px] lg:text-[56px] tracking-tight text-white leading-[1.055] mb-8">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#00e08c]">HIPAA-grade</span> from <br className="hidden md:block" />
-                day one — not bolted <br className="hidden md:block" />
-                on after Series A.
-              </h2>
-
-              {/* Paragraph */}
-              <p className="text-lg md:text-[16px] text-white/80 font-medium leading-[1.6] max-w-[540px] mb-10">
-                Compliance is architectural at Lex Value. Every layer, every service, every log — designed under BAA before the first record was ingested.
-              </p>
-
-              {/* Badges */}
-              <div className="flex flex-wrap gap-3 max-w-[480px]">
-                {badges.map((badge, index) => (
-                  <div key={index} className="px-4 py-1.5 rounded-full border border-[#00c37a]/40 bg-[#00c37a]/10 text-[#00c37a] text-[11px] font-bold tracking-wider">
-                    {badge}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Right Column - Grid */}
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid sm:grid-cols-2 gap-4 lg:gap-5"
-            >
-              {securityFeatures.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  variants={itemVariants}
-                  className="bg-white/5 border border-white/10 rounded-[24px] p-5 flex items-center gap-4 hover:bg-white/10 transition-colors duration-300 backdrop-blur-sm"
-                >
-                  <div className="shrink-0 w-11 h-11 rounded-full bg-[#00c37a]/15 flex items-center justify-center text-[#00c37a] shadow-[0_4px_20px_rgba(0,195,122,0.3)] border border-[#00c37a]/40">
-                    <feature.icon size={18} strokeWidth={2} />
-                  </div>
-
-                  <p className="text-[13.5px] text-white/90 font-medium leading-[1.5]">
-                    {feature.text}
-                  </p>
-                </motion.div>
-              ))}
-            </motion.div>
-
+          {/* Header */}
+          <div className="mb-12">
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#1a443a] mb-6">
+              <span className="text-[10px] font-bold text-[#00c37a] uppercase tracking-widest">Security & Compliance</span>
+            </div>
+            
+            <h2 className="font-display text-[32px] md:text-[42px] lg:text-[48px] tracking-tight text-white leading-[1.1] max-w-[600px]">
+              Compliance built into every layer — not bolted on.
+            </h2>
           </div>
+
+          {/* 2x3 Grid */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10"
+          >
+            {securityFeatures.map((feature, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="border border-[#1c4d42] bg-[#123e35]/50 rounded-[24px] p-6 flex flex-col hover:bg-[#1a443a]/50 transition-colors duration-300"
+              >
+                <feature.icon size={20} strokeWidth={1.5} className="text-[#00c37a] mb-5" />
+                
+                <h3 className="text-white text-[16px] font-medium mb-2">
+                  {feature.title}
+                </h3>
+                
+                <p className="text-[#9baea9] text-[13px] leading-[1.6]">
+                  {feature.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Workflow Bottom Bar */}
+          <div className="bg-[#154238] rounded-2xl md:rounded-[24px] p-4 md:p-6 flex flex-wrap items-center justify-center gap-2 md:gap-4 lg:gap-6">
+            {workflowSteps.map((step, index) => (
+              <div key={index} className="flex items-center gap-2 md:gap-4 lg:gap-6">
+                <div className="bg-[#215247] px-4 md:px-6 py-2 rounded-full">
+                  <span className="text-white/90 text-[13px] font-medium">{step}</span>
+                </div>
+                {index < workflowSteps.length - 1 && (
+                  <ArrowRight size={16} strokeWidth={2.5} className="text-[#00c37a]" />
+                )}
+              </div>
+            ))}
+          </div>
+
         </div>
 
       </div>
