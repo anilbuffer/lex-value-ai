@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Scale } from "lucide-react";
+import { Umbrella } from "lucide-react";
 
 export function Footer() {
   const links = [
@@ -18,7 +18,7 @@ export function Footer() {
         {/* Left: Logo */}
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-full bg-[#08302a] flex items-center justify-center text-white shrink-0">
-            <Scale size={14} strokeWidth={2} />
+            <Umbrella size={14} strokeWidth={2} />
           </div>
           <div className="font-bold text-[#08302a] text-[15px] tracking-tight">
             Lex Value<span className="text-[#00c37a]">.</span>AI
