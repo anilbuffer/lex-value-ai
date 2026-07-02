@@ -8,38 +8,38 @@ const stages = [
   {
     num: "01",
     icon: FileText,
-    title: "Ingestion",
-    description: "PDFs land in AES-256 encrypted S3, case-scoped."
+    title: "Upload",
+    description: "Drag-and-drop medical records. Scanned, handwritten, or digital PDFs."
   },
   {
     num: "02",
     icon: Zap,
-    title: "OCR & Extraction",
-    description: "AWS Textract + pdfplumber cover every quality of scan."
+    title: "Extract",
+    description: "AWS Textract + pdfplumber preserve page structure through OCR."
   },
   {
     num: "03",
     icon: Shield,
-    title: "PHI Wall",
-    description: "Names, DOBs, IDs tokenized before any LLM contact."
+    title: "Tokenize PHI",
+    description: "Names, DOBs, providers replaced with reference tokens. The security wall."
   },
   {
     num: "04",
     icon: Brain,
-    title: "Chunk & Embed",
-    description: "Page-aware chunks vectorized into pgvector."
+    title: "Embed",
+    description: "Chunks embedded to pgvector with document + page metadata."
   },
   {
     num: "05",
     icon: Sparkles,
-    title: "AI Analysis",
-    description: "GPT-4o over RAG. Every claim cited. Low confidence → human review."
+    title: "Reason",
+    description: "GPT-4o retrieves only the relevant chunks and builds the chronology."
   },
   {
     num: "06",
     icon: CheckCircle2,
-    title: "Rendered Output",
-    description: "Chronology, flags, and narrative in the attorney's dashboard."
+    title: "Deliver",
+    description: "Cited chronology, six flags, and demand narrative — notified by email."
   }
 ];
 
@@ -90,7 +90,7 @@ export function AIWorkflow() {
             >
               {/* Right-side glow (Default) */}
               <div className="absolute top-1/2 -right-1/4 w-[80%] h-[80%] -translate-y-1/2 bg-[#e6f4ef] rounded-full blur-[60px] pointer-events-none opacity-80 z-0" />
-              
+
               {/* Inner Glow on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
 
