@@ -47,7 +47,7 @@ export function FAQ() {
             <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">FAQ</span>
           </div>
 
-          <h2 className="font-display text-[36px] md:text-[48px] lg:text-[52px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
+          <h2 className="font-display text-[34px] md:text-[42px] lg:text-[48px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
             Answers for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">enterprise buyers.</span>
           </h2>
         </div>
@@ -64,11 +64,11 @@ export function FAQ() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-[#fcfbf9] border border-white rounded-[24px] overflow-hidden shadow-sm"
+                className="bg-[#fcfbf9] border border-white rounded-[18px] overflow-hidden shadow-sm"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full px-8 py-5 md:py-6 flex items-center justify-between text-left focus:outline-none group"
+                  className="w-full px-6 py-3 md:py-4 flex items-center justify-between text-left focus:outline-none group"
                 >
                   <span className="font-medium text-[16px] text-[#08302a] pr-8">
                     {faq.question}

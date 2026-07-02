@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, Lora, Roboto } from "next/font/google";
+import { Sora, Inter } from "next/font/google";
 import "./globals.css";
 
 const sora = Sora({
@@ -7,16 +7,9 @@ const sora = Sora({
   subsets: ["latin"],
 });
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700", "900"],
-});
-
-const lora = Lora({
-  variable: "--font-lora",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sora.variable} ${roboto.variable} ${lora.variable} scroll-smooth`}>
+    <html lang="en" className={`${sora.variable} ${inter.variable} scroll-smooth`}>
       <body className="min-h-screen flex flex-col font-sans text-foreground bg-background-warm selection:bg-accent/20">
         {children}
       </body>

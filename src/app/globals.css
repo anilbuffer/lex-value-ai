@@ -14,10 +14,9 @@
   --color-muted-text: #73888A;
   
   --font-sora: var(--font-sora);
-  --font-roboto: var(--font-roboto);
-  --font-display: var(--font-lora), "Lora", ui-serif, Georgia, serif;
-  --font-sans: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-lora), "Lora", ui-serif, Georgia, serif;
+  --font-inter: var(--font-inter);
+  --font-display: var(--font-sora), "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -29,12 +28,30 @@
   body {
     background: var(--background);
     color: var(--color-body-text);
-    font-family: var(--font-roboto), sans-serif;
+    font-family: var(--font-sans);
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
     color: var(--foreground);
     font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(8,48,42,0.08)];
+  }
+
+  .neon-glow {
+    box-shadow: 0 0 20px rgba(0, 195, 122, 0.3);
+  }
+  
+  .neon-text-glow {
+    text-shadow: 0 0 10px rgba(0, 195, 122, 0.3);
+  }
+
+  .section-icon {
+    @apply w-12 h-12 rounded-full bg-[#08302a] text-[#00c37a] flex items-center justify-center border border-[#00c37a]/30 shadow-[0_0_24px_rgba(0,195,122,0.25)];
   }
 }

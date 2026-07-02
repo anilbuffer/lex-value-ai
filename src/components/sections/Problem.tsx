@@ -53,7 +53,7 @@ export function Problem() {
               <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">The Problem</span>
             </div>
 
-            <h2 className="font-display text-[36px] md:text-[48px] lg:text-[60px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
+            <h2 className="font-display text-[34px] md:text-[42px] lg:text-[48px] tracking-tight text-[#08302a] leading-[1.055] mb-8">
               Medical record review<br className="hidden md:block" />
               is <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]"> slow, costly,</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">and inconsistent.</span>
             </h2>
@@ -76,7 +76,7 @@ export function Problem() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#FAFAFA] rounded-[32px] p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col items-center border border-white"
+            className="bg-[#FAFAFA] rounded-[24px] p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] flex flex-col items-center border border-white"
           >
             <div className="grid grid-cols-2 gap-4 w-full mb-6">
               {/* Card 1 */}

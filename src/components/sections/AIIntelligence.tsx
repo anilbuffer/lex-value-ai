@@ -78,19 +78,19 @@ export function AIIntelligence() {
   return (
     <SectionContainer className="bg-background-warm" id="case-intelligence">
       <div className="w-full max-w-7xl mx-auto px-6">
-        
+
         {/* Header Section */}
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)] mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00c37a]"></span>
             <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">AI Case Intelligence</span>
           </div>
-          
-          <h2 className="font-display text-[36px] md:text-[48px] lg:text-[52px] tracking-tight text-[#08302a] leading-[1.055] mb-6">
-            The six flags an adjuster uses to cut<br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">your case value.</span>
+
+          <h2 className="font-display text-[34px] md:text-[42px] lg:text-[48px] tracking-tight text-[#08302a] leading-[1.055] mb-6">
+            The six flags an adjuster <br className="hidden md:block" /> uses to cut
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]"> your case value.</span>
           </h2>
-          
+
           <p className="text-lg md:text-[16px] text-[#546a65] font-medium leading-[1.6]">
             Encoded from real defense-side evaluation experience — surfaced first, so you can<br className="hidden md:block" />
             prepare a response before a demand goes out.
@@ -98,7 +98,7 @@ export function AIIntelligence() {
         </div>
 
         {/* Flags Grid */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -109,7 +109,7 @@ export function AIIntelligence() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white border border-[#f0ebe1]/50 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-[32px] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300"
+              className="bg-white border border-[#f0ebe1]/50 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-[24px] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300"
             >
               {/* Top Row: Icon & Confidence Pill */}
               <div className="flex items-center justify-between mb-8">
@@ -120,20 +120,20 @@ export function AIIntelligence() {
                   {flag.conf.val}
                 </div>
               </div>
-              
+
               {/* Content */}
               <div className="flex flex-col w-full flex-grow">
                 <h3 className="font-display text-[20px] font-semibold text-[#08302a] mb-5">
                   {flag.title}
                 </h3>
-                
+
                 {/* Quote Pill */}
                 <div className="bg-[#fcfbfa] border border-[#f0ebe1] rounded-xl px-4 py-3 mb-4">
                   <span className="text-[14px] text-[#546a65] font-medium">
                     {flag.quote}
                   </span>
                 </div>
-                
+
                 <p className="text-[14px] text-[#546a65] leading-[1.6] font-medium mb-6 flex-grow">
                   {flag.description}
                 </p>
@@ -149,7 +149,7 @@ export function AIIntelligence() {
             </motion.div>
           ))}
         </motion.div>
-        
+
       </div>
     </SectionContainer>
   );

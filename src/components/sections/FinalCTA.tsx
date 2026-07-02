@@ -15,7 +15,7 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-[#08302a] bg-gradient-to-br from-[#12604f] via-[#08302a] to-[#020d0b] border border-[#00c37a]/20 rounded-[32px] md:rounded-[48px] p-12 md:p-20 lg:p-24 flex flex-col items-center text-center relative overflow-hidden shadow-2xl"
+          className="bg-[#08302a] bg-gradient-to-br from-[#12604f] via-[#08302a] to-[#020d0b] border border-[#00c37a]/20 rounded-[24px] md:rounded-[36px] p-12 md:p-20 lg:p-24 flex flex-col items-center text-center relative overflow-hidden shadow-2xl"
         >
           {/* Subtle Glow Background */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00c37a]/20 rounded-full blur-[140px] pointer-events-none" />
@@ -29,9 +29,9 @@ export function FinalCTA() {
             </div>
 
             {/* Heading */}
-            <h2 className="font-display text-[40px] md:text-[56px] lg:text-[72px] tracking-tight text-white leading-[1.055] mb-8">
+            <h2 className="font-display text-[36px] md:text-[44px] lg:text-[56px] tracking-tight text-white leading-[1.055] mb-8">
               Give your firm the same <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#00e08c]">analytical advantage</span><br className="hidden md:block" />
-              the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#00e08c]">defense</span>already has.
+              the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#00e08c]">defense</span> already has.
             </h2>
 
             {/* Paragraph */}

@@ -56,15 +56,15 @@ export function Security() {
   return (
     <SectionContainer className="bg-background-warm" id="security">
       <div className="w-full max-w-[1100px] mx-auto px-6">
-        
-        <div className="bg-[#0f342d] rounded-[32px] md:rounded-[40px] p-8 md:p-12 lg:p-14 shadow-xl">
-          
+
+        <div className="bg-[#0f342d] rounded-[24px] md:rounded-[40px] p-8 md:p-12 lg:p-14 shadow-xl">
+
           {/* Header */}
           <div className="mb-12">
             <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#1a443a] mb-6">
               <span className="text-[10px] font-bold text-[#00c37a] uppercase tracking-widest">Security & Compliance</span>
             </div>
-            
+
             <h2 className="font-display text-[32px] md:text-[42px] lg:text-[48px] tracking-tight text-white leading-[1.1] max-w-[600px]">
               Compliance built into every layer — not bolted on.
             </h2>
@@ -85,11 +85,11 @@ export function Security() {
                 className="border border-[#1c4d42] bg-[#123e35]/50 rounded-[24px] p-6 flex flex-col hover:bg-[#1a443a]/50 transition-colors duration-300"
               >
                 <feature.icon size={20} strokeWidth={1.5} className="text-[#00c37a] mb-5" />
-                
+
                 <h3 className="text-white text-[16px] font-medium mb-2">
                   {feature.title}
                 </h3>
-                
+
                 <p className="text-[#9baea9] text-[13px] leading-[1.6]">
                   {feature.description}
                 </p>

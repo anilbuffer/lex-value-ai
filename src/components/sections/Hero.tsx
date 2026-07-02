@@ -51,7 +51,7 @@ export function Hero() {
         {/* Left Column */}
         <div className="flex flex-col items-start text-left max-w-2xl">
           {/* Top Pill */}
-          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)] mb-8">
+          <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-[#00c37a]" />
             <span className="text-[10px] font-bold text-[#08302a]/70">HIPAA-Compliant <span className="mx-1 text-[#08302a]/30">·</span> AI for Plaintiff Law Firms</span>
           </motion.div>
@@ -105,12 +105,12 @@ export function Hero() {
           className="relative w-full h-full min-h-[500px] flex items-center justify-center lg:justify-end mt-12 lg:mt-0"
         >
           {/* Main Card */}
-          <div className="w-full max-w-[540px] bg-[#FAFAFA] border border-white shadow-[0_32px_64px_rgba(8,48,42,0.06),0_16px_24px_rgba(8,48,42,0.04)] rounded-[32px] p-8 relative">
+          <div className="w-full max-w-[540px] glass-panel rounded-[24px] p-8 relative">
 
             {/* Mockup Header */}
             <div className="flex items-center justify-between border-b border-[#08302a]/5 pb-6 mb-6">
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#08302a] flex items-center justify-center text-white shadow-[0_4px_20px_rgba(0,195,122,0.3)] border border-[#00c37a]/40">
+                <div className="section-icon w-10 h-10">
                   <FileText size={18} />
                 </div>
                 <div>
@@ -209,7 +209,7 @@ export function Hero() {
 
             {/* Floating Notification */}
             <motion.div
-              className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-[0_16px_32px_rgba(8,48,42,0.08)] border border-white p-4 w-[240px] flex items-center gap-3"
+              className="absolute -bottom-6 -left-6 glass-panel rounded-2xl p-4 w-[240px] flex items-center gap-3"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: [0, -6, 0], opacity: 1 }}
               transition={{ y: { duration: 6, repeat: Infinity, ease: "easeInOut" }, opacity: { delay: 0.8, duration: 0.5 } }}

@@ -39,9 +39,9 @@ export function ProductPreview() {
             <span className="text-[10px] font-bold text-[#08302a]/70 uppercase tracking-widest">INTERACTIVE PRODUCT PREVIEW</span>
           </div>
 
-          <h2 className="font-display text-[36px] md:text-[48px] lg:text-[52px] tracking-tight text-[#08302a] leading-[1.055] max-w-3xl mx-auto mb-8">
-            A real enterprise workspace — not a<br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]">screenshot.</span>
+          <h2 className="font-display text-[34px] md:text-[42px] lg:text-[48px] tracking-tight text-[#08302a] leading-[1.055] max-w-3xl mx-auto mb-8">
+            A real enterprise workspace <br className="hidden md:block" /> — not a
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00c37a] to-[#08302a]"> screenshot.</span>
           </h2>
         </div>
 
