@@ -99,12 +99,15 @@ export function WorkflowROI() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="glass-panel rounded-[18px] md:rounded-[24px] p-6 md:p-10 flex flex-col items-center justify-center text-center hover:-translate-y-1 transition-transform duration-300"
+              className="glass-panel rounded-[18px] md:rounded-[24px] p-6 md:p-10 flex flex-col items-center justify-center text-center hover:-translate-y-1 transition-transform duration-300 group"
             >
-              <h3 className={`font-display text-[34px] md:text-[42px] lg:text-[48px] font-medium leading-[1] mb-2 md:mb-4 ${metric.color}`}>
+              {/* Right-side glow (Default) */}
+              <div className="!absolute top-1/2 -right-1/4 w-[100%] h-[120%] -translate-y-1/2 bg-[#e6f4ef] rounded-full blur-[40px] pointer-events-none opacity-80 !z-0" />
+
+              <h3 className={`font-display text-[34px] md:text-[42px] lg:text-[48px] font-medium leading-[1] mb-2 md:mb-4 relative z-10 ${metric.color}`}>
                 <AnimatedCounter value={metric.value} suffix={metric.suffix} />
               </h3>
-              <p className="text-[13px] md:text-[15px] text-[#546a65] font-medium">
+              <p className="text-[13px] md:text-[15px] text-[#546a65] font-medium relative z-10">
                 {metric.label}
               </p>
             </motion.div>

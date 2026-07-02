@@ -40,7 +40,20 @@
 
 @layer utilities {
   .glass-panel {
-    @apply bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(8,48,42,0.08)];
+    @apply bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_30px_rgba(8,48,42,0.06)] hover:shadow-[0_8px_32px_rgba(0,195,122,0.15)] hover:border-[#00c37a]/40 transition-all duration-500 relative overflow-hidden;
+  }
+  
+  .glass-panel::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.08] via-transparent to-transparent opacity-0 transition-opacity duration-500 pointer-events-none z-0;
+  }
+  
+  .glass-panel:hover::before {
+    @apply opacity-100;
+  }
+  
+  .glass-panel > * {
+    @apply relative z-10;
   }
 
   .neon-glow {

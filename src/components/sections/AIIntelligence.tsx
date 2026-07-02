@@ -109,8 +109,15 @@ export function AIIntelligence() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white border border-[#f0ebe1]/50 shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-[24px] p-8 flex flex-col hover:-translate-y-1 transition-transform duration-300"
+              className="bg-white border border-[#e8e3d9] shadow-[0_8px_30px_rgba(0,0,0,0.04)] rounded-[24px] p-8 flex flex-col hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(0,195,122,0.12)] hover:border-[#00c37a]/40 transition-all duration-300 relative overflow-hidden group"
             >
+              {/* Right-side glow (Default) */}
+              <div className="absolute top-1/2 -right-1/4 w-[80%] h-[80%] -translate-y-1/2 bg-[#e6f4ef] rounded-full blur-[60px] pointer-events-none opacity-80 z-0" />
+              
+              {/* Inner Glow on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0" />
+
+              <div className="relative z-10 flex flex-col h-full">
               {/* Top Row: Icon & Confidence Pill */}
               <div className="flex items-center justify-between mb-8">
                 <div className="section-icon">
@@ -145,6 +152,7 @@ export function AIIntelligence() {
                     {flag.doc}
                   </span>
                 </div>
+              </div>
               </div>
             </motion.div>
           ))}

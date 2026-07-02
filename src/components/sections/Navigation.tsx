@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { Umbrella } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Navigation() {
@@ -28,7 +28,7 @@ export function Navigation() {
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center gap-2.5 pl-1">
           <div className="bg-[#08302a] text-[#00c37a] p-2 rounded-full flex items-center justify-center shadow-[0_0_12px_rgba(0,195,122,0.3)]">
-            <Umbrella size={18} strokeWidth={2} />
+            <ShieldCheck size={18} strokeWidth={2} />
           </div>
           <span className="font-bold text-[17px] tracking-tight text-[#08302a]">LexValue<span className="text-[#00c37a]">.AI</span></span>
         </div>

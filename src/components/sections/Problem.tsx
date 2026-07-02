@@ -80,33 +80,37 @@ export function Problem() {
           >
             <div className="grid grid-cols-2 gap-4 w-full mb-6">
               {/* Card 1 */}
-              <div className="bg-white rounded-[24px] p-6 h-36 flex flex-col justify-between border border-[#f0ebe1]/50 shadow-sm">
-                <Activity size={24} className="text-[#546a65]" strokeWidth={1.5} />
-                <div className="space-y-2 w-full">
+              <div className="bg-white rounded-[24px] p-6 h-36 flex flex-col justify-between border border-[#e8e3d9] shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,195,122,0.12)] hover:border-[#00c37a]/40 transition-all duration-500 relative overflow-hidden group hover:-translate-y-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.06] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <Activity size={24} className="text-[#546a65] relative z-10" strokeWidth={1.5} />
+                <div className="space-y-2 w-full relative z-10">
                   <div className="h-1.5 bg-[#e8e3d9] rounded-full w-[95%]"></div>
                   <div className="h-1.5 bg-[#e8e3d9] rounded-full w-[70%]"></div>
                 </div>
               </div>
               {/* Card 2 */}
-              <div className="bg-white rounded-[24px] p-6 h-36 flex flex-col justify-between border border-[#f0ebe1]/50 shadow-sm">
-                <Copy size={24} className="text-[#546a65]" strokeWidth={1.5} />
-                <div className="space-y-2 w-full">
+              <div className="bg-white rounded-[24px] p-6 h-36 flex flex-col justify-between border border-[#e8e3d9] shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,195,122,0.12)] hover:border-[#00c37a]/40 transition-all duration-500 relative overflow-hidden group hover:-translate-y-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.06] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <Copy size={24} className="text-[#546a65] relative z-10" strokeWidth={1.5} />
+                <div className="space-y-2 w-full relative z-10">
                   <div className="h-1.5 bg-[#e8e3d9] rounded-full w-[90%]"></div>
                   <div className="h-1.5 bg-[#e8e3d9] rounded-full w-[60%]"></div>
                 </div>
               </div>
               {/* Card 3 */}
-              <div className="bg-white rounded-[24px] p-6 h-36 flex flex-col justify-between border border-[#f0ebe1]/50 shadow-sm">
-                <Stethoscope size={24} className="text-[#546a65]" strokeWidth={1.5} />
-                <div className="space-y-2 w-full">
+              <div className="bg-white rounded-[24px] p-6 h-36 flex flex-col justify-between border border-[#e8e3d9] shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,195,122,0.12)] hover:border-[#00c37a]/40 transition-all duration-500 relative overflow-hidden group hover:-translate-y-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.06] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <Stethoscope size={24} className="text-[#546a65] relative z-10" strokeWidth={1.5} />
+                <div className="space-y-2 w-full relative z-10">
                   <div className="h-1.5 bg-[#e8e3d9] rounded-full w-[100%]"></div>
                   <div className="h-1.5 bg-[#e8e3d9] rounded-full w-[65%]"></div>
                 </div>
               </div>
               {/* Card 4 */}
-              <div className="bg-white rounded-[24px] p-6 h-36 flex flex-col justify-between border border-[#f0ebe1]/50 shadow-sm">
-                <FileText size={24} className="text-[#546a65]" strokeWidth={1.5} />
-                <div className="space-y-2 w-full">
+              <div className="bg-white rounded-[24px] p-6 h-36 flex flex-col justify-between border border-[#e8e3d9] shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,195,122,0.12)] hover:border-[#00c37a]/40 transition-all duration-500 relative overflow-hidden group hover:-translate-y-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.06] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <FileText size={24} className="text-[#546a65] relative z-10" strokeWidth={1.5} />
+                <div className="space-y-2 w-full relative z-10">
                   <div className="h-1.5 bg-[#e8e3d9] rounded-full w-[85%]"></div>
                   <div className="h-1.5 bg-[#e8e3d9] rounded-full w-[55%]"></div>
                 </div>
@@ -131,9 +135,10 @@ export function Problem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-[#FAFAFA] rounded-[24px] p-5 shadow-[0_2px_12px_rgb(0,0,0,0.03)] flex flex-col gap-4 border border-white"
+              className="bg-[#FAFAFA] rounded-[24px] p-5 border border-[#e8e3d9] shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,195,122,0.12)] hover:border-[#00c37a]/40 transition-all duration-500 relative overflow-hidden group hover:-translate-y-1 flex flex-col gap-4"
             >
-              <div className="section-icon">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.06] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="section-icon relative z-10">
                 <item.icon size={20} strokeWidth={2} />
               </div>
               <div>

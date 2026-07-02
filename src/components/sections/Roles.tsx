@@ -83,8 +83,11 @@ export function Roles() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-[#fcfbf9] border border-white shadow-sm rounded-[24px] p-8 md:p-10 flex flex-col h-full hover:-translate-y-1 transition-transform duration-300"
+              className="bg-[#fcfbf9] border border-[#e8e3d9] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,195,122,0.14)] hover:border-[#00c37a]/40 rounded-[24px] p-8 md:p-10 flex flex-col h-full hover:-translate-y-1 transition-all duration-500 relative overflow-hidden group"
             >
+              {/* Inner Glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
               {/* Icon */}
               <div className="section-icon mb-8">
                 <role.icon size={28} strokeWidth={1.5} />

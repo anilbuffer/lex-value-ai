@@ -80,8 +80,11 @@ export function PlatformOverview() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white rounded-[24px] p-8 md:p-10 shadow-sm border border-white/50 relative overflow-hidden flex flex-col hover:-translate-y-1 transition-transform duration-300"
+              className="bg-white rounded-[24px] p-8 md:p-10 border border-[#e8e3d9] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,195,122,0.14)] hover:border-[#00c37a]/40 relative overflow-hidden flex flex-col hover:-translate-y-1 transition-all duration-500 group"
             >
+              {/* Inner Glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
               {/* Subtle top right green glow */}
               <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#e6f4ef] rounded-full blur-[50px] opacity-70 pointer-events-none" />
 

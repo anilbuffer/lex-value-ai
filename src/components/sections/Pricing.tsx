@@ -100,11 +100,17 @@ export function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`rounded-[24px] p-8 md:p-10 flex flex-col h-full relative ${plan.theme === 'dark'
-                ? 'bg-[#08302a] bg-gradient-to-br from-[#12604f] via-[#08302a] to-[#020d0b] border border-[#00c37a]/20 shadow-2xl text-white overflow-hidden'
-                : 'bg-[#fcfbf9] border border-white shadow-sm text-[#08302a]'
+              className={`rounded-[24px] p-8 md:p-10 flex flex-col h-full relative transition-all duration-500 group ${plan.theme === 'dark'
+                ? 'bg-[#08302a] bg-gradient-to-br from-[#12604f] via-[#08302a] to-[#020d0b] border border-[#00c37a]/20 shadow-[0_8px_30px_rgba(0,195,122,0.1)] hover:shadow-[0_8px_40px_rgba(0,195,122,0.3)] hover:border-[#00c37a]/50 text-white overflow-hidden hover:-translate-y-1'
+                : 'bg-[#fcfbf9] border border-[#e8e3d9] shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_32px_rgba(0,195,122,0.14)] hover:border-[#00c37a]/40 text-[#08302a] overflow-hidden hover:-translate-y-1'
                 }`}
             >
+              {/* Right-side glow (Default) */}
+              <div className={`absolute top-1/2 -right-1/4 w-[80%] h-[80%] -translate-y-1/2 rounded-full blur-[60px] pointer-events-none z-0 ${plan.theme === 'dark' ? 'bg-[#00c37a]/10 opacity-80' : 'bg-[#e6f4ef] opacity-80'}`} />
+
+              {/* Inner Glow */}
+              <div className={`absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-0 ${plan.theme === 'dark' ? 'from-[#00c37a]/[0.2]' : ''}`} />
+
               {plan.badge && (
                 <div className="absolute top-8 right-8 bg-[#155145] text-[#14b87e] px-4 py-1.5 rounded-full text-[10px] font-bold tracking-wider uppercase z-20">
                   {plan.badge}

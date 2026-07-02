@@ -181,28 +181,40 @@ export function Hero() {
 
               <div className="grid grid-cols-2 gap-3">
                 {/* Flag 1 */}
-                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_2px_8px_rgba(8,48,42,0.02)]">
-                  <Clock size={14} className="text-[#00c37a] mb-2" />
-                  <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Treatment Gap</p>
-                  <p className="text-[13px] font-bold text-[#08302a]">47 days</p>
+                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_4px_16px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,195,122,0.12)] hover:border-[#00c37a]/40 transition-all duration-300 relative overflow-hidden group hover:-translate-y-0.5">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  <div className="relative z-10">
+                    <Clock size={14} className="text-[#00c37a] mb-2" />
+                    <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Treatment Gap</p>
+                    <p className="text-[13px] font-bold text-[#08302a]">47 days</p>
+                  </div>
                 </div>
                 {/* Flag 2 */}
-                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_2px_8px_rgba(8,48,42,0.02)]">
-                  <AlertTriangle size={14} className="text-[#00c37a] mb-2" />
-                  <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Surgery Rec.</p>
-                  <p className="text-[13px] font-bold text-[#08302a]">L4-L5 fusion</p>
+                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_4px_16px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,195,122,0.12)] hover:border-[#00c37a]/40 transition-all duration-300 relative overflow-hidden group hover:-translate-y-0.5">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  <div className="relative z-10">
+                    <AlertTriangle size={14} className="text-[#00c37a] mb-2" />
+                    <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Surgery Rec.</p>
+                    <p className="text-[13px] font-bold text-[#08302a]">L4-L5 fusion</p>
+                  </div>
                 </div>
                 {/* Flag 3 */}
-                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_2px_8px_rgba(8,48,42,0.02)]">
-                  <AlertTriangle size={14} className="text-[#00c37a] mb-2" />
-                  <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Degenerative</p>
-                  <p className="text-[13px] font-bold text-[#08302a]">Pre-incident</p>
+                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_4px_16px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,195,122,0.12)] hover:border-[#00c37a]/40 transition-all duration-300 relative overflow-hidden group hover:-translate-y-0.5">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  <div className="relative z-10">
+                    <AlertTriangle size={14} className="text-[#00c37a] mb-2" />
+                    <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Degenerative</p>
+                    <p className="text-[13px] font-bold text-[#08302a]">Pre-incident</p>
+                  </div>
                 </div>
                 {/* Flag 4 */}
-                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_2px_8px_rgba(8,48,42,0.02)]">
-                  <CheckCircle2 size={14} className="text-[#00c37a] mb-2" />
-                  <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Causation</p>
-                  <p className="text-[13px] font-bold text-[#08302a]">Strong</p>
+                <div className="bg-white rounded-xl p-4 border border-[#08302a]/5 shadow-[0_4px_16px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(0,195,122,0.12)] hover:border-[#00c37a]/40 transition-all duration-300 relative overflow-hidden group hover:-translate-y-0.5">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#00c37a]/[0.08] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  <div className="relative z-10">
+                    <CheckCircle2 size={14} className="text-[#00c37a] mb-2" />
+                    <p className="text-[11px] text-[#08302a]/50 font-medium mb-0.5">Causation</p>
+                    <p className="text-[13px] font-bold text-[#08302a]">Strong</p>
+                  </div>
                 </div>
               </div>
             </div>

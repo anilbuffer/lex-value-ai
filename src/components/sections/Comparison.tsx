@@ -76,9 +76,13 @@ export function Comparison() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="bg-white rounded-[24px] p-2 md:p-3 shadow-sm border border-white overflow-x-auto"
+          className="bg-white rounded-[24px] p-2 md:p-3 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-[#e8e3d9] relative overflow-hidden"
         >
-          <div className="min-w-[800px] grid grid-cols-[1.5fr_1fr_1fr_1.2fr]">
+          {/* Right-side glow (Default) */}
+          <div className="absolute top-1/2 -right-[10%] w-[40%] h-[150%] -translate-y-1/2 bg-[#e6f4ef] rounded-full blur-[60px] pointer-events-none opacity-80 z-0" />
+
+          <div className="overflow-x-auto relative z-10">
+            <div className="min-w-[800px] grid grid-cols-[1.5fr_1fr_1fr_1.2fr]">
 
             {/* Headers */}
             <div className="px-6 py-4 text-[11px] font-bold text-[#869591] uppercase tracking-widest border-b border-gray-100">
@@ -125,6 +129,7 @@ export function Comparison() {
               );
             })}
 
+          </div>
           </div>
         </motion.div>
 

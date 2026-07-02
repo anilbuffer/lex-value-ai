@@ -33,19 +33,19 @@ export default function Home() {
       <SectionDivider />
       <ScrollReveal className="w-full"><AIIntelligence /></ScrollReveal>
       <SectionDivider />
+      <ScrollReveal className="w-full"><WorkflowROI /></ScrollReveal>
+      <SectionDivider />
       <ScrollReveal className="w-full"><FounderStory /></ScrollReveal>
       <SectionDivider />
-      <ScrollReveal className="w-full"><ProductPreview /></ScrollReveal>
-      <SectionDivider />
       <ScrollReveal className="w-full"><PlatformOverview /></ScrollReveal>
+      <SectionDivider />
+      <ScrollReveal className="w-full"><ProductPreview /></ScrollReveal>
       <SectionDivider />
       <ScrollReveal className="w-full"><Security /></ScrollReveal>
       <SectionDivider />
       <ScrollReveal className="w-full"><AIWorkflow /></ScrollReveal>
       <SectionDivider />
       <ScrollReveal className="w-full"><Roles /></ScrollReveal>
-      <SectionDivider />
-      <ScrollReveal className="w-full"><WorkflowROI /></ScrollReveal>
       <SectionDivider />
       <ScrollReveal className="w-full"><Testimonials /></ScrollReveal>
       <SectionDivider />

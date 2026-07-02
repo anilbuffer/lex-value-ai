@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Umbrella } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 export function Footer() {
   const links = [
@@ -17,8 +17,8 @@ export function Footer() {
 
         {/* Left: Logo */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-[#08302a] flex items-center justify-center text-white shrink-0">
-            <Umbrella size={14} strokeWidth={2} />
+          <div className="bg-[#08302a] text-[#00c37a] p-2 rounded-full flex items-center justify-center shadow-[0_0_12px_rgba(0,195,122,0.3)]">
+            <ShieldCheck size={18} strokeWidth={2} />
           </div>
           <div className="font-bold text-[#08302a] text-[15px] tracking-tight">
             Lex Value<span className="text-[#00c37a]">.</span>AI
